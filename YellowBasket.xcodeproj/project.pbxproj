@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		316559EE11B24ECECEDB3AD4 /* Pods_YellowBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */; };
+		A1CEBC023F04E209436A9788 /* Pods_YellowBasketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */; };
 		CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B479A210BAF00009DEC4F /* AppDelegate.swift */; };
 		CE0B479D210BAF00009DEC4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B479C210BAF00009DEC4F /* ViewController.swift */; };
 		CE0B47A0210BAF00009DEC4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B479E210BAF00009DEC4F /* Main.storyboard */; };
 		CE0B47A2210BAF02009DEC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A1210BAF02009DEC4F /* Assets.xcassets */; };
 		CE0B47A5210BAF02009DEC4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */; };
 		CE0B47B0210BAF03009DEC4F /* YellowBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47AF210BAF03009DEC4F /* YellowBasketTests.swift */; };
+		CE0B47BF210BB082009DEC4F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YellowBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YellowBasketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		216D2EAAACB5FA9579E744A0 /* Pods-YellowBasket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasket.release.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket.release.xcconfig"; sourceTree = "<group>"; };
+		41411DFD6EEF97FFE91432AD /* Pods-YellowBasketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C35DB126666218B9B25B588 /* Pods-YellowBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket.debug.xcconfig"; sourceTree = "<group>"; };
+		B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE0B4797210BAF00009DEC4F /* YellowBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YellowBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0B479A210BAF00009DEC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0B479C210BAF00009DEC4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,7 @@
 		CE0B47AB210BAF03009DEC4F /* YellowBasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YellowBasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0B47AF210BAF03009DEC4F /* YellowBasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowBasketTests.swift; sourceTree = "<group>"; };
 		CE0B47B1210BAF03009DEC4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316559EE11B24ECECEDB3AD4 /* Pods_YellowBasket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +61,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CEBC023F04E209436A9788 /* Pods_YellowBasketTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37A07AE08240D20C64A763E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */,
+				1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		672ABB24883C0BB41276AEB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C35DB126666218B9B25B588 /* Pods-YellowBasket.debug.xcconfig */,
+				216D2EAAACB5FA9579E744A0 /* Pods-YellowBasket.release.xcconfig */,
+				41411DFD6EEF97FFE91432AD /* Pods-YellowBasketTests.debug.xcconfig */,
+				B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE0B478E210BAF00009DEC4F = {
 			isa = PBXGroup;
 			children = (
 				CE0B4799210BAF00009DEC4F /* YellowBasket */,
 				CE0B47AE210BAF03009DEC4F /* YellowBasketTests */,
 				CE0B4798210BAF00009DEC4F /* Products */,
+				672ABB24883C0BB41276AEB2 /* Pods */,
+				37A07AE08240D20C64A763E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +111,10 @@
 		CE0B4799210BAF00009DEC4F /* YellowBasket */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B479A210BAF00009DEC4F /* AppDelegate.swift */,
-				CE0B479C210BAF00009DEC4F /* ViewController.swift */,
-				CE0B479E210BAF00009DEC4F /* Main.storyboard */,
-				CE0B47A1210BAF02009DEC4F /* Assets.xcassets */,
-				CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */,
-				CE0B47A6210BAF02009DEC4F /* Info.plist */,
+				CE0B47BD210BB05B009DEC4F /* Details */,
+				CE0B47BC210BB054009DEC4F /* Landing */,
+				CE0B47BB210BB041009DEC4F /* Launch */,
+				CE0B47BA210BB023009DEC4F /* Supporting Files */,
 			);
 			path = YellowBasket;
 			sourceTree = "<group>";
@@ -96,6 +128,89 @@
 			path = YellowBasketTests;
 			sourceTree = "<group>";
 		};
+		CE0B47BA210BB023009DEC4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B479A210BAF00009DEC4F /* AppDelegate.swift */,
+				CE0B479C210BAF00009DEC4F /* ViewController.swift */,
+				CE0B479E210BAF00009DEC4F /* Main.storyboard */,
+				CE0B47A1210BAF02009DEC4F /* Assets.xcassets */,
+				CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */,
+				CE0B47A6210BAF02009DEC4F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0B47BB210BB041009DEC4F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CE0B47BC210BB054009DEC4F /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47C2210BB09D009DEC4F /* Presenter */,
+				CE0B47C1210BB096009DEC4F /* View */,
+				CE0B47C0210BB08E009DEC4F /* Model */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		CE0B47BD210BB05B009DEC4F /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47C5210BB0B0009DEC4F /* Presenter */,
+				CE0B47C4210BB0AA009DEC4F /* View */,
+				CE0B47C3210BB0A5009DEC4F /* Model */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		CE0B47C0210BB08E009DEC4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0B47C1210BB096009DEC4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0B47C2210BB09D009DEC4F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE0B47C3210BB0A5009DEC4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0B47C4210BB0AA009DEC4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0B47C5210BB0B0009DEC4F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0B47B4210BAF03009DEC4F /* Build configuration list for PBXNativeTarget "YellowBasket" */;
 			buildPhases = (
+				95F88C739359760A1C3DBAA5 /* [CP] Check Pods Manifest.lock */,
 				CE0B4793210BAF00009DEC4F /* Sources */,
 				CE0B4794210BAF00009DEC4F /* Frameworks */,
 				CE0B4795210BAF00009DEC4F /* Resources */,
+				B6BBAA49932B43D874DFF53E /* [CP] Embed Pods Frameworks */,
+				24436927EE44FF597C84F5AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0B47B7210BAF03009DEC4F /* Build configuration list for PBXNativeTarget "YellowBasketTests" */;
 			buildPhases = (
+				E212ECC100EAEC15966C4AA6 /* [CP] Check Pods Manifest.lock */,
 				CE0B47A7210BAF03009DEC4F /* Sources */,
 				CE0B47A8210BAF03009DEC4F /* Frameworks */,
 				CE0B47A9210BAF03009DEC4F /* Resources */,
+				60C1F3C9BB3477B61A8D4076 /* [CP] Embed Pods Frameworks */,
+				7C9DD72A980C1957B7DE65FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,12 +313,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24436927EE44FF597C84F5AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60C1F3C9BB3477B61A8D4076 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C9DD72A980C1957B7DE65FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95F88C739359760A1C3DBAA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YellowBasket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BBAA49932B43D874DFF53E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E212ECC100EAEC15966C4AA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YellowBasketTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE0B4793210BAF00009DEC4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE0B479D210BAF00009DEC4F /* ViewController.swift in Sources */,
+				CE0B47BF210BB082009DEC4F /* LaunchViewController.swift in Sources */,
 				CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,11 +580,13 @@
 		};
 		CE0B47B5210BAF03009DEC4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C35DB126666218B9B25B588 /* Pods-YellowBasket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QY797FB22P;
-				INFOPLIST_FILE = YellowBasket/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YellowBasket/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,11 +600,13 @@
 		};
 		CE0B47B6210BAF03009DEC4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216D2EAAACB5FA9579E744A0 /* Pods-YellowBasket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QY797FB22P;
-				INFOPLIST_FILE = YellowBasket/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YellowBasket/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +620,7 @@
 		};
 		CE0B47B8210BAF03009DEC4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41411DFD6EEF97FFE91432AD /* Pods-YellowBasketTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,6 +642,7 @@
 		};
 		CE0B47B9210BAF03009DEC4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
