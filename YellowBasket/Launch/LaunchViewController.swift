@@ -35,6 +35,12 @@ class LaunchViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         view.shake(view: imageView)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let navController = UINavigationController(rootViewController:CountrySelectionMainViewController())
+            self.present(navController, animated: false, completion: nil)
+            
+        }
     }
 
 }

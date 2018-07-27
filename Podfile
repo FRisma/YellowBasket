@@ -7,6 +7,9 @@ target 'YellowBasket' do
 
   # Pods for YellowBasket
   pod 'SnapKit'
+  pod 'Alamofire'
+  pod 'AlamofireNetworkActivityLogger'
+  pod 'AlamofireImage'
 
   target 'YellowBasketTests' do
     inherit! :search_paths

@@ -10,13 +10,20 @@
 		316559EE11B24ECECEDB3AD4 /* Pods_YellowBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */; };
 		A1CEBC023F04E209436A9788 /* Pods_YellowBasketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */; };
 		CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B479A210BAF00009DEC4F /* AppDelegate.swift */; };
-		CE0B479D210BAF00009DEC4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B479C210BAF00009DEC4F /* ViewController.swift */; };
 		CE0B47A0210BAF00009DEC4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B479E210BAF00009DEC4F /* Main.storyboard */; };
 		CE0B47A2210BAF02009DEC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A1210BAF02009DEC4F /* Assets.xcassets */; };
 		CE0B47A5210BAF02009DEC4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */; };
 		CE0B47B0210BAF03009DEC4F /* YellowBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47AF210BAF03009DEC4F /* YellowBasketTests.swift */; };
 		CE0B47BF210BB082009DEC4F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */; };
 		CE0B47C8210BB145009DEC4F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47C7210BB145009DEC4F /* Utils.swift */; };
+		CE0B47CA210BC1ED009DEC4F /* LandingMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47C9210BC1ED009DEC4F /* LandingMainViewController.swift */; };
+		CE0B47CC210BC213009DEC4F /* LandingMainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47CB210BC213009DEC4F /* LandingMainViewPresenter.swift */; };
+		CE0B47CE210BC30F009DEC4F /* ProductDetailsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47CD210BC30F009DEC4F /* ProductDetailsMainViewController.swift */; };
+		CE0B47D0210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47CF210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift */; };
+		CE0B47D3210BC386009DEC4F /* MercadoLibreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D2210BC386009DEC4F /* MercadoLibreProvider.swift */; };
+		CE0B47D6210BC3D5009DEC4F /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D5210BC3D5009DEC4F /* SearchService.swift */; };
+		CE0B47D9210BC799009DEC4F /* CountrySelectionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */; };
+		CE0B47DE210BCB38009DEC4F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47DD210BCB38009DEC4F /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,6 @@
 		B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE0B4797210BAF00009DEC4F /* YellowBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YellowBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0B479A210BAF00009DEC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE0B479C210BAF00009DEC4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE0B479F210BAF00009DEC4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE0B47A1210BAF02009DEC4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0B47A4210BAF02009DEC4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +54,14 @@
 		CE0B47B1210BAF03009DEC4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		CE0B47C7210BB145009DEC4F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CE0B47C9210BC1ED009DEC4F /* LandingMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingMainViewController.swift; sourceTree = "<group>"; };
+		CE0B47CB210BC213009DEC4F /* LandingMainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingMainViewPresenter.swift; sourceTree = "<group>"; };
+		CE0B47CD210BC30F009DEC4F /* ProductDetailsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsMainViewController.swift; sourceTree = "<group>"; };
+		CE0B47CF210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsMainViewPresenter.swift; sourceTree = "<group>"; };
+		CE0B47D2210BC386009DEC4F /* MercadoLibreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoLibreProvider.swift; sourceTree = "<group>"; };
+		CE0B47D5210BC3D5009DEC4F /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionMainViewController.swift; sourceTree = "<group>"; };
+		CE0B47DD210BCB38009DEC4F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +107,6 @@
 		CE0B478E210BAF00009DEC4F = {
 			isa = PBXGroup;
 			children = (
-				CE0B47C6210BB12E009DEC4F /* Support */,
 				CE0B4799210BAF00009DEC4F /* YellowBasket */,
 				CE0B47AE210BAF03009DEC4F /* YellowBasketTests */,
 				CE0B4798210BAF00009DEC4F /* Products */,
@@ -114,9 +127,13 @@
 		CE0B4799210BAF00009DEC4F /* YellowBasket */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B47BD210BB05B009DEC4F /* Details */,
-				CE0B47BC210BB054009DEC4F /* Landing */,
 				CE0B47BB210BB041009DEC4F /* Launch */,
+				CE0B47BC210BB054009DEC4F /* Landing */,
+				CE0B47D7210BC6FA009DEC4F /* CountrySelection */,
+				CE0B47D1210BC376009DEC4F /* Service */,
+				CE0B47D4210BC38D009DEC4F /* Provider */,
+				CE0B47BD210BB05B009DEC4F /* Details */,
+				CE0B47C6210BB12E009DEC4F /* Support */,
 				CE0B47BA210BB023009DEC4F /* Supporting Files */,
 			);
 			path = YellowBasket;
@@ -135,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				CE0B479A210BAF00009DEC4F /* AppDelegate.swift */,
-				CE0B479C210BAF00009DEC4F /* ViewController.swift */,
 				CE0B479E210BAF00009DEC4F /* Main.storyboard */,
 				CE0B47A1210BAF02009DEC4F /* Assets.xcassets */,
 				CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */,
@@ -182,6 +198,7 @@
 		CE0B47C1210BB096009DEC4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B47C9210BC1ED009DEC4F /* LandingMainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +206,7 @@
 		CE0B47C2210BB09D009DEC4F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B47CB210BC213009DEC4F /* LandingMainViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -203,6 +221,7 @@
 		CE0B47C4210BB0AA009DEC4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B47CD210BC30F009DEC4F /* ProductDetailsMainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +229,7 @@
 		CE0B47C5210BB0B0009DEC4F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B47CF210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -220,6 +240,55 @@
 				CE0B47C7210BB145009DEC4F /* Utils.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		CE0B47D1210BC376009DEC4F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47D5210BC3D5009DEC4F /* SearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CE0B47D4210BC38D009DEC4F /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47D2210BC386009DEC4F /* MercadoLibreProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		CE0B47D7210BC6FA009DEC4F /* CountrySelection */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47DC210BCB1C009DEC4F /* Presenter */,
+				CE0B47DB210BCB16009DEC4F /* Model */,
+				CE0B47DA210BCB10009DEC4F /* View */,
+				CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */,
+			);
+			path = CountrySelection;
+			sourceTree = "<group>";
+		};
+		CE0B47DA210BCB10009DEC4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0B47DB210BCB16009DEC4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47DD210BCB38009DEC4F /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0B47DC210BCB1C009DEC4F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,10 +464,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,10 +506,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0B479D210BAF00009DEC4F /* ViewController.swift in Sources */,
+				CE0B47CC210BC213009DEC4F /* LandingMainViewPresenter.swift in Sources */,
 				CE0B47BF210BB082009DEC4F /* LaunchViewController.swift in Sources */,
+				CE0B47D9210BC799009DEC4F /* CountrySelectionMainViewController.swift in Sources */,
 				CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */,
+				CE0B47CA210BC1ED009DEC4F /* LandingMainViewController.swift in Sources */,
+				CE0B47CE210BC30F009DEC4F /* ProductDetailsMainViewController.swift in Sources */,
+				CE0B47D3210BC386009DEC4F /* MercadoLibreProvider.swift in Sources */,
+				CE0B47DE210BCB38009DEC4F /* Country.swift in Sources */,
+				CE0B47D6210BC3D5009DEC4F /* SearchService.swift in Sources */,
 				CE0B47C8210BB145009DEC4F /* Utils.swift in Sources */,
+				CE0B47D0210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
