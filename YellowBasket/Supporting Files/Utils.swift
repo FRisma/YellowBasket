@@ -68,3 +68,27 @@ class GradientColors {
         layer.locations = [0.0, 1.0]
     }
 }
+
+extension UserDefaults {
+    enum UserDefaultsKeys: String {
+        case countrySelected
+    }
+    
+    func setselectedCountry(country: String) {
+        set("AR", forKey: UserDefaultsKeys.countrySelected.rawValue)
+        synchronize()
+    }
+    
+    func set(selectedCountry country: String) {
+        set("AR", forKey: UserDefaultsKeys.countrySelected.rawValue)
+        synchronize()
+    }
+    
+    func hasSelectedACountry() -> Bool {
+        let value = UserDefaults.standard.value(forKey: UserDefaultsKeys.countrySelected.rawValue) as? String
+        if value != nil {
+            return true
+        }
+        return false
+    }
+}

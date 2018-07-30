@@ -10,7 +10,6 @@
 		316559EE11B24ECECEDB3AD4 /* Pods_YellowBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */; };
 		A1CEBC023F04E209436A9788 /* Pods_YellowBasketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */; };
 		CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B479A210BAF00009DEC4F /* AppDelegate.swift */; };
-		CE0B47A0210BAF00009DEC4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B479E210BAF00009DEC4F /* Main.storyboard */; };
 		CE0B47A2210BAF02009DEC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A1210BAF02009DEC4F /* Assets.xcassets */; };
 		CE0B47A5210BAF02009DEC4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */; };
 		CE0B47B0210BAF03009DEC4F /* YellowBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47AF210BAF03009DEC4F /* YellowBasketTests.swift */; };
@@ -21,9 +20,20 @@
 		CE0B47CE210BC30F009DEC4F /* ProductDetailsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47CD210BC30F009DEC4F /* ProductDetailsMainViewController.swift */; };
 		CE0B47D0210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47CF210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift */; };
 		CE0B47D3210BC386009DEC4F /* MercadoLibreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D2210BC386009DEC4F /* MercadoLibreProvider.swift */; };
-		CE0B47D6210BC3D5009DEC4F /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D5210BC3D5009DEC4F /* SearchService.swift */; };
+		CE0B47D6210BC3D5009DEC4F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D5210BC3D5009DEC4F /* APIService.swift */; };
 		CE0B47D9210BC799009DEC4F /* CountrySelectionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */; };
 		CE0B47DE210BCB38009DEC4F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47DD210BCB38009DEC4F /* Country.swift */; };
+		CEED1F96210BF2D900F32002 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F95210BF2D900F32002 /* MainNavigationController.swift */; };
+		CEED1F98210DFF3300F32002 /* ProviderBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F97210DFF3300F32002 /* ProviderBaseClass.swift */; };
+		CEED1F9B210E051200F32002 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F9A210E051200F32002 /* Request.swift */; };
+		CEED1F9D210E2D4B00F32002 /* CountrySearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F9C210E2D4B00F32002 /* CountrySearchRequest.swift */; };
+		CEED1F9F210E2E6B00F32002 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F9E210E2E6B00F32002 /* RequestBuilder.swift */; };
+		CEED1FA3210E317300F32002 /* ProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FA2210E317300F32002 /* ProviderProtocol.swift */; };
+		CEED1FA6210EB34500F32002 /* TrendingKeywordsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FA5210EB34500F32002 /* TrendingKeywordsRequest.swift */; };
+		CEED1FA8210EB5F800F32002 /* TrendingKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FA7210EB5F800F32002 /* TrendingKeyword.swift */; };
+		CEED1FAC210EBDF100F32002 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FAB210EBDF100F32002 /* Item.swift */; };
+		CEED1FAE210EC4D600F32002 /* ItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FAD210EC4D600F32002 /* ItemsRequest.swift */; };
+		CEED1FB0210EC4E400F32002 /* ItemRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FAF210EC4E400F32002 /* ItemRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +55,6 @@
 		B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE0B4797210BAF00009DEC4F /* YellowBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YellowBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0B479A210BAF00009DEC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE0B479F210BAF00009DEC4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE0B47A1210BAF02009DEC4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0B47A4210BAF02009DEC4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0B47A6210BAF02009DEC4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,9 +68,20 @@
 		CE0B47CD210BC30F009DEC4F /* ProductDetailsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsMainViewController.swift; sourceTree = "<group>"; };
 		CE0B47CF210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsMainViewPresenter.swift; sourceTree = "<group>"; };
 		CE0B47D2210BC386009DEC4F /* MercadoLibreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoLibreProvider.swift; sourceTree = "<group>"; };
-		CE0B47D5210BC3D5009DEC4F /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		CE0B47D5210BC3D5009DEC4F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionMainViewController.swift; sourceTree = "<group>"; };
 		CE0B47DD210BCB38009DEC4F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		CEED1F95210BF2D900F32002 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		CEED1F97210DFF3300F32002 /* ProviderBaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderBaseClass.swift; sourceTree = "<group>"; };
+		CEED1F9A210E051200F32002 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		CEED1F9C210E2D4B00F32002 /* CountrySearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchRequest.swift; sourceTree = "<group>"; };
+		CEED1F9E210E2E6B00F32002 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		CEED1FA2210E317300F32002 /* ProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProtocol.swift; sourceTree = "<group>"; };
+		CEED1FA5210EB34500F32002 /* TrendingKeywordsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingKeywordsRequest.swift; sourceTree = "<group>"; };
+		CEED1FA7210EB5F800F32002 /* TrendingKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendingKeyword.swift; path = YellowBasket/Model/TrendingKeyword.swift; sourceTree = SOURCE_ROOT; };
+		CEED1FAB210EBDF100F32002 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CEED1FAD210EC4D600F32002 /* ItemsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsRequest.swift; sourceTree = "<group>"; };
+		CEED1FAF210EC4E400F32002 /* ItemRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,13 +147,9 @@
 		CE0B4799210BAF00009DEC4F /* YellowBasket */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B47BB210BB041009DEC4F /* Launch */,
-				CE0B47BC210BB054009DEC4F /* Landing */,
-				CE0B47D7210BC6FA009DEC4F /* CountrySelection */,
-				CE0B47D1210BC376009DEC4F /* Service */,
-				CE0B47D4210BC38D009DEC4F /* Provider */,
-				CE0B47BD210BB05B009DEC4F /* Details */,
-				CE0B47C6210BB12E009DEC4F /* Support */,
+				CEED1FAA210EBB2700F32002 /* Model */,
+				CEED1FA9210EBAFB00F32002 /* UI */,
+				CE0B47C6210BB12E009DEC4F /* Networking */,
 				CE0B47BA210BB023009DEC4F /* Supporting Files */,
 			);
 			path = YellowBasket;
@@ -151,8 +167,8 @@
 		CE0B47BA210BB023009DEC4F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B47C7210BB145009DEC4F /* Utils.swift */,
 				CE0B479A210BAF00009DEC4F /* AppDelegate.swift */,
-				CE0B479E210BAF00009DEC4F /* Main.storyboard */,
 				CE0B47A1210BAF02009DEC4F /* Assets.xcassets */,
 				CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */,
 				CE0B47A6210BAF02009DEC4F /* Info.plist */,
@@ -164,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */,
+				CEED1F95210BF2D900F32002 /* MainNavigationController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -173,7 +190,6 @@
 			children = (
 				CE0B47C2210BB09D009DEC4F /* Presenter */,
 				CE0B47C1210BB096009DEC4F /* View */,
-				CE0B47C0210BB08E009DEC4F /* Model */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -183,16 +199,8 @@
 			children = (
 				CE0B47C5210BB0B0009DEC4F /* Presenter */,
 				CE0B47C4210BB0AA009DEC4F /* View */,
-				CE0B47C3210BB0A5009DEC4F /* Model */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		CE0B47C0210BB08E009DEC4F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CE0B47C1210BB096009DEC4F /* View */ = {
@@ -211,13 +219,6 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		CE0B47C3210BB0A5009DEC4F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		CE0B47C4210BB0AA009DEC4F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,18 +235,24 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		CE0B47C6210BB12E009DEC4F /* Support */ = {
+		CE0B47C6210BB12E009DEC4F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B47C7210BB145009DEC4F /* Utils.swift */,
+				CEED1F97210DFF3300F32002 /* ProviderBaseClass.swift */,
+				CEED1F9A210E051200F32002 /* Request.swift */,
 			);
-			path = Support;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		CE0B47D1210BC376009DEC4F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B47D5210BC3D5009DEC4F /* SearchService.swift */,
+				CE0B47D5210BC3D5009DEC4F /* APIService.swift */,
+				CEED1FAF210EC4E400F32002 /* ItemRequest.swift */,
+				CEED1FAD210EC4D600F32002 /* ItemsRequest.swift */,
+				CEED1F9C210E2D4B00F32002 /* CountrySearchRequest.swift */,
+				CEED1FA5210EB34500F32002 /* TrendingKeywordsRequest.swift */,
+				CEED1F9E210E2E6B00F32002 /* RequestBuilder.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -253,6 +260,7 @@
 		CE0B47D4210BC38D009DEC4F /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				CEED1FA4210E31B900F32002 /* Protocol */,
 				CE0B47D2210BC386009DEC4F /* MercadoLibreProvider.swift */,
 			);
 			path = Provider;
@@ -261,10 +269,7 @@
 		CE0B47D7210BC6FA009DEC4F /* CountrySelection */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B47DC210BCB1C009DEC4F /* Presenter */,
-				CE0B47DB210BCB16009DEC4F /* Model */,
 				CE0B47DA210BCB10009DEC4F /* View */,
-				CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */,
 			);
 			path = CountrySelection;
 			sourceTree = "<group>";
@@ -272,23 +277,40 @@
 		CE0B47DA210BCB10009DEC4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		CE0B47DB210BCB16009DEC4F /* Model */ = {
+		CEED1FA4210E31B900F32002 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				CE0B47DD210BCB38009DEC4F /* Country.swift */,
+				CEED1FA2210E317300F32002 /* ProviderProtocol.swift */,
 			);
-			path = Model;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
-		CE0B47DC210BCB1C009DEC4F /* Presenter */ = {
+		CEED1FA9210EBAFB00F32002 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B47BD210BB05B009DEC4F /* Details */,
+				CE0B47D7210BC6FA009DEC4F /* CountrySelection */,
+				CE0B47BC210BB054009DEC4F /* Landing */,
+				CE0B47BB210BB041009DEC4F /* Launch */,
 			);
-			path = Presenter;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CEED1FAA210EBB2700F32002 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B47D4210BC38D009DEC4F /* Provider */,
+				CE0B47D1210BC376009DEC4F /* Service */,
+				CEED1FA7210EB5F800F32002 /* TrendingKeyword.swift */,
+				CE0B47DD210BCB38009DEC4F /* Country.swift */,
+				CEED1FAB210EBDF100F32002 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,7 +402,6 @@
 			files = (
 				CE0B47A5210BAF02009DEC4F /* LaunchScreen.storyboard in Resources */,
 				CE0B47A2210BAF02009DEC4F /* Assets.xcassets in Resources */,
-				CE0B47A0210BAF00009DEC4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,17 +527,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEED1FAC210EBDF100F32002 /* Item.swift in Sources */,
+				CEED1FAE210EC4D600F32002 /* ItemsRequest.swift in Sources */,
+				CEED1FB0210EC4E400F32002 /* ItemRequest.swift in Sources */,
 				CE0B47CC210BC213009DEC4F /* LandingMainViewPresenter.swift in Sources */,
 				CE0B47BF210BB082009DEC4F /* LaunchViewController.swift in Sources */,
 				CE0B47D9210BC799009DEC4F /* CountrySelectionMainViewController.swift in Sources */,
 				CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */,
+				CEED1F98210DFF3300F32002 /* ProviderBaseClass.swift in Sources */,
+				CEED1F9D210E2D4B00F32002 /* CountrySearchRequest.swift in Sources */,
+				CEED1F96210BF2D900F32002 /* MainNavigationController.swift in Sources */,
 				CE0B47CA210BC1ED009DEC4F /* LandingMainViewController.swift in Sources */,
 				CE0B47CE210BC30F009DEC4F /* ProductDetailsMainViewController.swift in Sources */,
 				CE0B47D3210BC386009DEC4F /* MercadoLibreProvider.swift in Sources */,
 				CE0B47DE210BCB38009DEC4F /* Country.swift in Sources */,
-				CE0B47D6210BC3D5009DEC4F /* SearchService.swift in Sources */,
+				CE0B47D6210BC3D5009DEC4F /* APIService.swift in Sources */,
+				CEED1F9B210E051200F32002 /* Request.swift in Sources */,
+				CEED1FA3210E317300F32002 /* ProviderProtocol.swift in Sources */,
 				CE0B47C8210BB145009DEC4F /* Utils.swift in Sources */,
+				CEED1FA6210EB34500F32002 /* TrendingKeywordsRequest.swift in Sources */,
 				CE0B47D0210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift in Sources */,
+				CEED1F9F210E2E6B00F32002 /* RequestBuilder.swift in Sources */,
+				CEED1FA8210EB5F800F32002 /* TrendingKeyword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,14 +571,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE0B479E210BAF00009DEC4F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE0B479F210BAF00009DEC4F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -678,7 +702,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QY797FB22P;
+				DEVELOPMENT_TEAM = X3NTASB9PV;
 				INFOPLIST_FILE = "$(SRCROOT)/YellowBasket/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -698,7 +722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QY797FB22P;
+				DEVELOPMENT_TEAM = X3NTASB9PV;
 				INFOPLIST_FILE = "$(SRCROOT)/YellowBasket/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

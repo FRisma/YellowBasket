@@ -17,5 +17,4 @@ struct Country: Decodable {
         case identifier = "id"
         case name
     }
-    
 }
