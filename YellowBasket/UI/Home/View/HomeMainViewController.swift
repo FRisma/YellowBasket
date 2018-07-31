@@ -8,8 +8,8 @@
 
 import UIKit
 
-class HomeMainViewController: UIViewController {
-    
+class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
+
     // This will hold the items returned from the service
     private var itemsList: [Item]? {
         didSet {
@@ -46,11 +46,65 @@ class HomeMainViewController: UIViewController {
         return CategoryListView()
     }()
     
+    private var presenter: HomeMainPresenterProtocol!
+    
+    //MARK: Initialization
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("Not supported")
+    }
+    
+    init(withPresenter presenter:HomeMainPresenterProtocol) {
+        super.init(nibName: nil, bundle: nil)
+        self.presenter = presenter
+    }
+    
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = kHomeBackgroundColor
         
+        setupSearchController()
+        setupCategories()
+        setupMainView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.setViewDelegate(delegate: self)
+    }
+    
+    //MARK: HomeMainControllerProtocol
+    func update(categories: [Category]) {
+        self.categories = categories
+    }
+    
+    func update(products: [Item]) {
+        self.itemsList = products
+    }
+    
+    func goToDetailsView(forItem item: Item) {
+        let vc = ProductDetailsMainViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func goToDetailsView(forCategory category: Category) {
+    }
+    
+    func showErrorMessage(message: String) {
+        //TODO
+    }
+    
+    //MARK: Internal
+    private func setupSearchController() {
+        search.searchResultsUpdater = self
+        self.definesPresentationContext = true
+        search.dimsBackgroundDuringPresentation = false
+        search.obscuresBackgroundDuringPresentation = false
+        search.hidesNavigationBarDuringPresentation = false
+        self.navigationItem.titleView = search.searchBar
+    }
+    
+    private func setupCategories() {
         categoryView.delegate = self
         view.addSubview(categoryView)
         
@@ -63,7 +117,9 @@ class HomeMainViewController: UIViewController {
             make.left.right.equalTo(view)
             make.height.equalTo(90)
         }
-        
+    }
+    
+    private func setupMainView() {
         collectionView.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -73,53 +129,6 @@ class HomeMainViewController: UIViewController {
             make.top.equalTo(categoryView.snp.bottom)
             make.left.bottom.right.equalToSuperview().inset(5)
         }
-        
-        search.searchResultsUpdater = self
-        self.definesPresentationContext = true
-        search.dimsBackgroundDuringPresentation = false
-        search.obscuresBackgroundDuringPresentation = false
-        search.hidesNavigationBarDuringPresentation = false
-        self.navigationItem.titleView = search.searchBar
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-//        APIService.shared.getTrendingKeywords(onSuccess: { (keywordsArray) in
-//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//            print("success")
-//        }) { (error) in
-//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//            print("error")
-//        }
-//        
-//        APIService.shared.getTrendingKeywords(onSuccess: { (keywordsArray) in
-//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//            print("success")
-//        }) { (error) in
-//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//            print("error")
-//        }
-        
-        APIService.shared.getItems(forQuery: "audi a3", onSuccess: { (itemsArray) in
-            self.itemsList = itemsArray
-        }) { (error) in
-            print("error")
-        }
-        
-        APIService.shared.getCategories(onSuccess: { (categoriesArray) in
-            self.categories = categoriesArray
-        }) { (error) in
-            print("error")
-        }
-        
-//        let fakeItem = Item(identifier: "MLA679232727", title: "String", price: 123, currencyId: "<#T##String#>", quantity: 1, condition: "Nueo", thumbnail: "tuhermana")
-//        APIService.shared.getDetails(forItem: fakeItem, onSuccess: { (itemDetails) in
-//            print("Jamon")
-//        }) { (error) in
-//            print("error")
-//        }
     }
 }
 

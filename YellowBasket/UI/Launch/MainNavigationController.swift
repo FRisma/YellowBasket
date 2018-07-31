@@ -12,9 +12,8 @@ class MainNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        viewControllers = [HomeMainViewController()]
+        viewControllers = [HomeMainViewController(withPresenter: HomeMainViewPresenter())]
         
         if !hasSetACountry() {
             perform(#selector(navigateToLandingMainViewController), with: nil, afterDelay: 1)
@@ -37,7 +36,6 @@ class MainNavigationController: UINavigationController {
     }
     
     @objc private func navigateToLandingMainViewController() {
-        viewControllers = [HomeMainViewController()]
+        viewControllers = [HomeMainViewController(withPresenter: HomeMainViewPresenter())]
     }
-
 }

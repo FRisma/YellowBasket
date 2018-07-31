@@ -39,7 +39,7 @@ class LaunchViewController: UIViewController {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            let navController = MainNavigationController(rootViewController:HomeMainViewController())
+            let navController = MainNavigationController(rootViewController:HomeMainViewController(withPresenter: HomeMainViewPresenter()))
             self.present(navController, animated: false, completion: nil)
         }
     }
