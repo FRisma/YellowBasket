@@ -24,8 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         NetworkActivityLogger.shared.startLogging()
         
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = .black
+        navigationBarAppearace.barTintColor = kLaunchScreenTopColor
+        
         window = UIWindow()
-        window?.rootViewController = LaunchViewController()
+        window?.rootViewController = MainNavigationController()
         window?.makeKeyAndVisible()
         
         return true

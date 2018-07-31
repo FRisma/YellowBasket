@@ -9,21 +9,20 @@
 import Foundation
 import Alamofire
 
+//https://api.mercadolibre.com/items/MLA717988441
 class ItemRequest: Request {
     var path: String
     
     var method: HTTPMethod
     
-    var params: RequestParams
+    var params: RequestParams?
     
-    var headers: [String : Any]?
+    var headers: RequestHeaders?
     
-    init() {
-        let countryKey = "MLA"
-        
-        path = "/sites/\(countryKey)/trends/search"
+    init(withItemId itemId: String) {
+        path = "/items/\(itemId)"
         method = .get
-        params = .url(nil)
+        params = nil
         headers = nil
     }
     

@@ -1,5 +1,5 @@
 //
-//  LandingMainViewPresenter.swift
+//  HomeMainViewPresenter.swift
 //  YellowBasket
 //
 //  Created by Franco Risma on 27/07/2018.

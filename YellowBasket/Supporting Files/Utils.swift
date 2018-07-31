@@ -22,6 +22,15 @@ let kITLang = "lang"
 
 let kLaunchScreenTopColor = UIColor(0xf8ff47)
 let kLaunchScreenBottomColor = UIColor(0xfaff89)
+let kHomeBackgroundColor = UIColor(0xdddddd)
+let kCategoriesBackgroundColor = UIColor(0xb2b2b2)
+
+/**
+ * Aliases
+ */
+
+public typealias RequestParams = [String: Any]
+public typealias RequestHeaders = [String: Any]
 
 /**
  * @brief Add the ability for UIColor to be initialized with hex values
@@ -69,26 +78,26 @@ class GradientColors {
     }
 }
 
+/**
+ * @brief Extension for setting the country
+ */
 extension UserDefaults {
     enum UserDefaultsKeys: String {
         case countrySelected
     }
     
-    func setselectedCountry(country: String) {
-        set("AR", forKey: UserDefaultsKeys.countrySelected.rawValue)
+    func set(selectedCountry country: String) {
+        set(country, forKey: UserDefaultsKeys.countrySelected.rawValue)
         synchronize()
     }
     
-    func set(selectedCountry country: String) {
-        set("AR", forKey: UserDefaultsKeys.countrySelected.rawValue)
-        synchronize()
+    func getSelectedCountry() -> String {
+        guard let value = object(forKey: UserDefaultsKeys.countrySelected.rawValue) as? String else { return "" }
+        return value
     }
     
     func hasSelectedACountry() -> Bool {
-        let value = UserDefaults.standard.value(forKey: UserDefaultsKeys.countrySelected.rawValue) as? String
-        if value != nil {
-            return true
-        }
-        return false
+        guard let _ = object(forKey: UserDefaultsKeys.countrySelected.rawValue) as? String else { return false }
+        return true
     }
 }

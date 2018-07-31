@@ -23,22 +23,12 @@ class ProviderBaseClass {
                      onSuccess:@escaping (String) -> Void,
                      onFailure:@escaping (Error) -> Void) {
         
-        guard let url = URL(string: endpoint + request.path) else {
-            onFailure(NSError(domain: "com.yellowBasket", code: 234, userInfo: ["underlyingError" : "Bad url"]))
-            return
-        }
-        
-        
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = request.method.rawValue
-        /*
-         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-         request.timeoutInterval = 10 // 10 secs
-         let values = ["key": "value"]
-         request.httpBody = try! JSONSerialization.data(withJSONObject: values, options: [])
-         */
-        
-        manager.request(urlRequest as URLRequestConvertible)
+        let url = endpoint+request.path
+        manager.request(url,
+                        method: HTTPMethod.init(rawValue: request.method.rawValue)!,
+                        parameters: request.params,
+                        encoding: URLEncoding.default,
+                        headers: [:])
             .validate()
             .responseString { response in
                 switch(response.result) {

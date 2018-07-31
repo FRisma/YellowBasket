@@ -13,10 +13,11 @@ class MainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if self.hasSetACountry() {
-            // Country selected
-        } else {
-            pushViewController(CountrySelectionMainViewController(), animated: true)
+        
+        viewControllers = [HomeMainViewController()]
+        
+        if !hasSetACountry() {
+            perform(#selector(navigateToLandingMainViewController), with: nil, afterDelay: 1)
         }
     }
 
@@ -26,8 +27,17 @@ class MainNavigationController: UINavigationController {
     }
     
     private func hasSetACountry() -> Bool {
-        return false
-        //return UserDefaults.standard.value(forKey: "selectedCountry") as! Bool
+        return UserDefaults.standard.hasSelectedACountry()
+        
+    }
+    
+    //MARK: Iternal
+    @objc private func navigateToCountrySelectionViewController() {
+        present(CountrySelectionMainViewController(), animated: true, completion: nil)
+    }
+    
+    @objc private func navigateToLandingMainViewController() {
+        viewControllers = [HomeMainViewController()]
     }
 
 }

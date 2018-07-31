@@ -71,9 +71,8 @@ class CountrySelectionMainViewController: UIViewController, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected \(availableCountries[indexPath.row])")
-        //UserDefaults.setselectedCountry(availableCountries[indexPath.row].identifier)
+        let selectedCountryIdentifier = availableCountries[indexPath.row].identifier
+        UserDefaults.standard.set(selectedCountry: selectedCountryIdentifier)
+        self.dismiss(animated: true, completion: nil)
     }
-    
-    // MARK: - Internal
 }

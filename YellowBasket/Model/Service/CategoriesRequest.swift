@@ -1,16 +1,16 @@
 //
-//  CountrySearchRequest.swift
+//  CategoriesRequest.swift
 //  YellowBasket
 //
-//  Created by Franco Risma on 29/07/2018.
+//  Created by Franco Risma on 31/07/2018.
 //  Copyright © 2018 FRisma. All rights reserved.
 //
 
 import Foundation
 import Alamofire
+//https://api.mercadolibre.com//sites/MLA/categories
 
-class CountrySearchRequest: Request {
-    
+class CategoriesRequest: Request {
     var path: String
     
     var method: HTTPMethod
@@ -19,8 +19,8 @@ class CountrySearchRequest: Request {
     
     var headers: RequestHeaders?
     
-    init() {
-        path = "/sites"
+    init(forCountryKey countryKey: String) {
+        path = "/sites/\(countryKey)/categories"
         method = .get
         params = nil
         headers = nil

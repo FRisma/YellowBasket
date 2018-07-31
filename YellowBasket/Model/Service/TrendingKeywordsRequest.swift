@@ -14,17 +14,14 @@ class TrendingKeywordsRequest: Request {
     
     var method: HTTPMethod
     
-    var params: RequestParams
+    var params: RequestParams?
     
-    var headers: [String : Any]?
+    var headers: RequestHeaders?
     
-    init() {
-        let countryKey = "MLA"
-        
+    init(forCountryKey countryKey: String) {
         path = "/sites/\(countryKey)/trends/search"
         method = .get
-        params = .url(nil)
+        params = nil
         headers = nil
     }
-
 }

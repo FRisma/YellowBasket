@@ -8,6 +8,15 @@
 
 import Foundation
 
+struct Items: Decodable {
+    
+    let itemsArray: [Item]
+    
+    enum CodingKeys : String, CodingKey {
+        case itemsArray = "results"
+    }
+}
+
 struct Item: Decodable {
     
     let identifier: String
@@ -27,5 +36,4 @@ struct Item: Decodable {
         case condition
         case thumbnail
     }
-    
 }
