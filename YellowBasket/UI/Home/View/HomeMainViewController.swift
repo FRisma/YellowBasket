@@ -176,7 +176,7 @@ extension HomeMainViewController: UICollectionViewDataSource {
 extension HomeMainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let widthPerItem = view.frame.width / 2 - ((collectionViewLayout as? UICollectionViewFlowLayout)?.minimumInteritemSpacing ?? 0.0)
-        return CGSize(width: widthPerItem, height: widthPerItem * 1.15)
+        return CGSize(width: widthPerItem, height: widthPerItem * 1.25)
     }
 }
 

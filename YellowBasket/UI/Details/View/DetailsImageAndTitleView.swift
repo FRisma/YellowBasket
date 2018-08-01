@@ -16,7 +16,8 @@ class DetailsImageAndTitleView: UIView {
         }
     }
     
-    var imagesArray = [String]()
+    var imagesURLArray = [String]()
+    var currentImageDisplayingIndex = 0
     
     private let carouselPreview: UIImageView = {
         let cp = UIImageView()
@@ -28,16 +29,16 @@ class DetailsImageAndTitleView: UIView {
     private let titleLabel: UILabel = {
         let tl = UILabel(frame: .zero)
         tl.numberOfLines = 4
-        tl.font = UIFont.systemFont(ofSize: 32, weight: .light)
+        tl.font = UIFont.systemFont(ofSize: 31, weight: .thin)
         return tl
     }()
     private let priceLabel: UILabel = {
         let pl = UILabel(frame: .zero)
         pl.numberOfLines = 1
-        pl.font = UIFont.systemFont(ofSize: 22, weight: .bold)
+        pl.font = UIFont.systemFont(ofSize: 25, weight: .light)
         return pl
     }()
-
+    
     //MARK: Public
     func reloadData() {
         if delegate != nil {
@@ -54,12 +55,16 @@ class DetailsImageAndTitleView: UIView {
         addSubview(priceLabel)
         
         let singleTapGR  = UITapGestureRecognizer   (target: self, action: #selector(DetailsImageAndTitleView.imageTapped(tapGestureRecognizer:)))
-        let swipeGR  = UISwipeGestureRecognizer (target: self, action: #selector(DetailsImageAndTitleView.imageSwipeHandler(_:)))
+        let swipeLeftGR  = UISwipeGestureRecognizer (target: self, action: #selector(DetailsImageAndTitleView.imageSwipeHandler(_:)))
+        let swipeRightGR  = UISwipeGestureRecognizer (target: self, action: #selector(DetailsImageAndTitleView.imageSwipeHandler(_:)))
+        swipeLeftGR.direction = .left
+        swipeRightGR.direction = .right
         carouselPreview.isUserInteractionEnabled = true
         carouselPreview.addGestureRecognizer(singleTapGR)
-        carouselPreview.addGestureRecognizer(swipeGR)
+        carouselPreview.addGestureRecognizer(swipeLeftGR)
+        carouselPreview.addGestureRecognizer(swipeRightGR)
         
-        let productUrlArray = delegate!.detailsImageView(imagesStringArrayForProductInView: self)
+        imagesURLArray = delegate!.detailsImageView(imagesStringArrayForProductInView: self)
         let productTitle = delegate!.detailsImageView(titleForProductInView: self)
         let productPrice = delegate!.detailsImageView(priceForProductInView: self)
         
@@ -67,40 +72,69 @@ class DetailsImageAndTitleView: UIView {
         
         titleLabel.text = productTitle
         priceLabel.text = productPrice
-        if !productUrlArray.isEmpty {
-            if let url = URL(string: productUrlArray.first!) {
-                carouselPreview.af_setImage(withURL: url)
-            }
+        if !imagesURLArray.isEmpty {
+            loadImage(url: imagesURLArray.first!)
         }
         
         carouselPreview.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
             make.height.equalTo(self.snp.height).multipliedBy(0.5)
-            //make.size.equalTo(150)
         }
         
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(carouselPreview.snp.bottom).offset(5)
-            make.left.right.equalToSuperview().inset(2)
+            make.left.right.equalToSuperview().inset(10)
         }
         
         priceLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(3)
-            make.bottom.left.right.equalToSuperview().inset(2)
+            make.left.equalToSuperview().offset(15)
+            make.bottom.right.equalToSuperview().inset(5)
         }
     }
     
     @objc func imageSwipeHandler(_ sender: UISwipeGestureRecognizer) {
-        if sender.direction == UISwipeGestureRecognizerDirection.right {
-            print("Right")
+        if sender.direction == .right {
+            loadPrevImage()
         }
         
-        if sender.direction == UISwipeGestureRecognizerDirection.left {
-            print("Left")
+        if sender.direction == .left {
+            loadNextImage()
         }
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer?) {
         self.delegate?.carouselImageTapped!()
+    }
+    
+    private func loadImage(url: String) {
+        if let anUrl = URL(string: url) {
+            if let index = imagesURLArray.index(of: url) {
+                currentImageDisplayingIndex = index
+            }
+            carouselPreview.af_setImage(withURL: anUrl)
+        }
+    }
+    
+    private func loadNextImage() {
+        if !imagesURLArray.isEmpty {
+            if currentImageDisplayingIndex == imagesURLArray.count - 1 {
+                return
+            }
+            if currentImageDisplayingIndex < imagesURLArray.count {
+                loadImage(url: imagesURLArray[currentImageDisplayingIndex + 1])
+            }
+        }
+    }
+    
+    private func loadPrevImage() {
+        if !imagesURLArray.isEmpty {
+            if currentImageDisplayingIndex == 0 {
+                return
+            }
+            if currentImageDisplayingIndex > 0 {
+                loadImage(url: imagesURLArray[currentImageDisplayingIndex - 1])
+            }
+        }
     }
 }

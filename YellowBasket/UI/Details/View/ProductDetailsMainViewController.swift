@@ -24,7 +24,7 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
         let dl = UILabel(frame: .zero)
         dl.numberOfLines = 0
         dl.lineBreakMode = .byWordWrapping
-        dl.font = UIFont.systemFont(ofSize: 18, weight: .ultraLight)
+        dl.font = UIFont.systemFont(ofSize: 16, weight: .ultraLight)
         return dl
     }()
     private let activityIndicator = LoadingIndicator.shared
@@ -124,7 +124,7 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
         imageAndTitleView.snp.makeConstraints { (make) in
             make.top.equalTo(scrollView)
             make.left.right.equalTo(view)
-            make.height.equalTo(view.snp.height).multipliedBy(0.66)
+            make.height.equalTo(view.snp.height).multipliedBy(0.6)
         }
         
         descriptionLabel.snp.makeConstraints { (make) in

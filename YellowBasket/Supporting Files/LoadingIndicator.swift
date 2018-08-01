@@ -16,7 +16,7 @@ class LoadingIndicator: UIView {
     private let loadingIndicator: UIActivityIndicatorView!
     
     override private init(frame: CGRect) {
-        loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         super.init(frame: frame)
         
         let blurEffect = UIBlurEffect(style: .light)

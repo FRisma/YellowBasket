@@ -22,7 +22,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         let label = UILabel(frame: .zero)
         label.numberOfLines = 1
         label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
     
@@ -30,7 +30,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         let label = UILabel(frame: .zero)
         label.numberOfLines = 2
         label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 11)
+        label.font = UIFont.systemFont(ofSize: 13)
         return label
     }()
     
@@ -56,7 +56,6 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     //MARK: Internal
     private func setupView() {
-        
         contentView.addSubview(imageView)
         contentView.addSubview(priceLabel)
         contentView.addSubview(descriptionLabel)
@@ -68,7 +67,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
 
         priceLabel.snp.makeConstraints { (make) in
             make.top.equalTo(imageView.snp.bottom).offset(2)
-            make.left.right.equalTo(imageView)
+            make.left.right.equalTo(imageView).inset(7)
         }
 
         descriptionLabel.snp.makeConstraints { (make) in
@@ -76,9 +75,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
             make.left.right.equalTo(priceLabel)
         }
         
-        layer.cornerRadius = 7.0
+        layer.cornerRadius = 7.5
         layer.masksToBounds = true
     }
-    
-    
 }
