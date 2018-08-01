@@ -63,10 +63,6 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
         
         setupView()
         applyConstraints()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         presenter.setViewDelegate(delegate: self)
     }
     
