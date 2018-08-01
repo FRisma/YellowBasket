@@ -50,9 +50,7 @@ extension UIColor {
 }
 
 /**
- * @brief Shake animation for every view
- *
- * @discussion Just call yourview.shake() and you'll get the animation
+ * @brief Shake animation and shadow to view
  */
 extension UIView {
     func shake(view: UIView) {
@@ -64,6 +62,18 @@ extension UIView {
         animation.isAdditive = true
         
         view.layer.add(animation, forKey: "shake")
+    }
+    
+    func addShadow(scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowRadius = 1
+        
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 }
 

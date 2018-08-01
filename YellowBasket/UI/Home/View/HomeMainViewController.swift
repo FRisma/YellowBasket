@@ -157,9 +157,10 @@ extension HomeMainViewController: UICollectionViewDataSource {
         cell.priceLabel.text = String(anItem.price)
         cell.descriptionLabel.text = anItem.title
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
             cell.alpha = 1
-        }
+        }, completion: nil)
+        
         return cell
     }
     

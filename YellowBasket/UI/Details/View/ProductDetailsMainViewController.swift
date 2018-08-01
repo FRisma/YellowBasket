@@ -7,37 +7,33 @@
 //
 
 import UIKit
+import AlamofireImage
 
-class ProductDetailsMainViewController: UIViewController, ProductDetailsMainControllerProtocol {
+class ProductDetailsMainViewController: UIViewController, ProductDetailsMainControllerProtocol, DetailsImageAndTitleViewProtocol {
     
     private var presenter: ProductDetailsMainPresenterProtocol!
-    
     private let scrollView: UIScrollView = {
         let sv = UIScrollView(frame: .zero)
         sv.showsHorizontalScrollIndicator = false
         return sv
     }()
-    
-    private let titleLabel: UILabel = {
-        let tl = UILabel(frame: .zero)
-        tl.numberOfLines = 4
-        tl.font = UIFont.systemFont(ofSize: 32, weight: .light)
-        return tl
-    }()
-    private let priceLabel: UILabel = {
-        let pl = UILabel(frame: .zero)
-        pl.numberOfLines = 1
-        pl.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-        return pl
+    private var imageAndTitleView: DetailsImageAndTitleView = {
+        return DetailsImageAndTitleView()
     }()
     private let descriptionLabel: UILabel = {
         let dl = UILabel(frame: .zero)
         dl.numberOfLines = 0
         dl.lineBreakMode = .byWordWrapping
-        dl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        dl.font = UIFont.systemFont(ofSize: 18, weight: .ultraLight)
         return dl
     }()
     private let activityIndicator = LoadingIndicator.shared
+    private var displayingProduct: Item? {
+        didSet {
+            imageAndTitleView.reloadData()
+        }
+    }
+    private var imagesArray = [String]()
     
     //MARK: Initialization
     required init?(coder aDecoder: NSCoder) {
@@ -53,11 +49,12 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .white
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(ProductDetailsMainViewController.actionButtonTapped(_ :)))
 
-        view.backgroundColor = kHomeBackgroundColor
         view.addSubview(scrollView)
-        scrollView.addSubview(titleLabel)
-        scrollView.addSubview(priceLabel)
+        scrollView.addSubview(imageAndTitleView)
         scrollView.addSubview(descriptionLabel)
         
         applyConstraints()
@@ -66,9 +63,10 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.setViewDelegate(delegate: self)
+        imageAndTitleView.delegate = self
     }
     
-    //MARK: Internal
+    //MARK: ProductDetailsMainControllerProtocol
     func showErrorMessage(message: String) {
         //TODO
     }
@@ -82,12 +80,39 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
     }
     
     func updateInfoForProduct(_ product: Item) {
-        titleLabel.text = product.title
-        priceLabel.text = String(product.price)
+        displayingProduct = product
+        if let urlArray = product.images {
+            for aStringURL in urlArray {
+                imagesArray.append(aStringURL.url)
+            }
+        }
+        imageAndTitleView.reloadData()
     }
     
     func updateProductDescription(_ descr: String) {
         descriptionLabel.text = descr
+    }
+    
+    //MARK: DetailsImageAndTitleViewProtocol
+    func detailsImageView(imagesStringArrayForProductInView: DetailsImageAndTitleView) -> [String] {
+        return imagesArray
+    }
+    
+    func detailsImageView(titleForProductInView: DetailsImageAndTitleView) -> String {
+        return displayingProduct?.title ?? ""
+    }
+    
+    func detailsImageView(priceForProductInView: DetailsImageAndTitleView) -> String {
+        if let product = displayingProduct {
+            return String(product.price)
+        }
+        return ""
+    }
+    
+    func carouselImageTapped() {
+        let vc = CarouselPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        vc.urlArray = imagesArray
+        self.navigationController?.present(vc, animated: true, completion: nil)
     }
     
     //MARK: Internal
@@ -96,21 +121,23 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
             make.edges.equalToSuperview()
         }
         
-        titleLabel.snp.makeConstraints { (make) in
+        imageAndTitleView.snp.makeConstraints { (make) in
             make.top.equalTo(scrollView)
-            make.left.right.equalTo(view).inset(2)
-        }
-        
-        priceLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(3)
-            make.left.right.equalTo(view).inset(2)
+            make.left.right.equalTo(view)
+            make.height.equalTo(view.snp.height).multipliedBy(0.66)
         }
         
         descriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(priceLabel.snp.bottom).offset(10)
+            make.top.equalTo(imageAndTitleView.snp.bottom).offset(15)
             make.left.right.equalTo(view).inset(10)
             make.bottom.equalTo(scrollView)
         }
     }
-
+    
+    @objc func actionButtonTapped(_ sender: UIButton) {
+        if let url = displayingProduct?.sharingURL {
+            let activityVC = UIActivityViewController(activityItems: ["Mira lo que encontre.",url], applicationActivities: nil)
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
 }

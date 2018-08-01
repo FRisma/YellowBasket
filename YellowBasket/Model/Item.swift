@@ -27,6 +27,7 @@ struct Item: Decodable {
     let condition: String
     let thumbnail: String
     let images: [Pictures]?
+    let sharingURL: String?
     
     enum CodingKeys : String, CodingKey {
         case identifier = "id"
@@ -37,6 +38,7 @@ struct Item: Decodable {
         case condition
         case thumbnail
         case images = "pictures"
+        case sharingURL = "permalink"
     }
 }
 
