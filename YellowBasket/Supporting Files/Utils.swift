@@ -20,7 +20,7 @@ let kITLang = "lang"
  * Style
  */
 
-let kLaunchScreenTopColor = UIColor(0xf8ff47)
+let kLaunchScreenTopColor = UIColor(0xfff159)
 let kLaunchScreenBottomColor = UIColor(0xfaff89)
 let kHomeBackgroundColor = UIColor(0xdddddd)
 let kCategoriesBackgroundColor = UIColor(0xb2b2b2)

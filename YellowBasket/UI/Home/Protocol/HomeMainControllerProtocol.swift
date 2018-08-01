@@ -11,8 +11,16 @@ import Foundation
 protocol HomeMainControllerProtocol {
 
     func update(categories: [Category])
+    
     func update(products: [Item])
+    
     func goToDetailsView(forItem item: Item)
+    
     func goToDetailsView(forCategory category: Category)
+    
     func showErrorMessage(message: String)
+    
+    func showLoadingIndicator()
+    
+    func hideLoadingIndicator()
 }

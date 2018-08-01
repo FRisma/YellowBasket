@@ -1,16 +1,16 @@
 //
-//  ItemRequest.swift
+//  ItemDescriptionRequest.swift
 //  YellowBasket
 //
-//  Created by Franco Risma on 30/07/2018.
+//  Created by Franco Risma on 31/07/2018.
 //  Copyright © 2018 FRisma. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-//https://api.mercadolibre.com/items/MLA717988441
-class ItemRequest: Request {
+//https://api.mercadolibre.com/items/MLA713654941/descriptions
+class ItemDescriptionRequest: Request {
     var path: String
     
     var method: HTTPMethod
@@ -20,9 +20,10 @@ class ItemRequest: Request {
     var headers: RequestHeaders?
     
     init(withItemId itemId: String) {
-        path = "/items/\(itemId)"
+        path = "/items/\(itemId)/descriptions"
         method = .get
         params = nil
         headers = nil
     }
+    
 }

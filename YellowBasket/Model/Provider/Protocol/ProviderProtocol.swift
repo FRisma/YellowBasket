@@ -18,5 +18,7 @@ protocol ProviderProtocol {
     
     func getItemDetail(withRequest request: Request, completion: @escaping (Item?, Error?) -> Void)
     
+    func getItemDescription(withRequest request: Request, completion: @escaping (ItemDescription?, Error?) -> Void)
+    
     func getCategories(withRequest request: Request, completion: @escaping ([Category]?, Error?) -> Void)
 }

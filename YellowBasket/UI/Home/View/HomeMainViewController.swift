@@ -9,15 +9,8 @@
 import UIKit
 
 class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
-
-    // This will hold the items returned from the service
-    private var itemsList: [Item]? {
-        didSet {
-            itemsFiltered = itemsList
-        }
-    }
     
-    private var itemsFiltered: [Item]?{
+    private var itemsList: [Item]? {
         didSet {
             self.collectionView.reloadData()
         }
@@ -31,22 +24,27 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
     
     private let search = UISearchController(searchResultsController: nil)
     
-    private let cellIdentifier = "cell"
-    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.headerReferenceSize = CGSize(width: 50, height: 100)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.showsVerticalScrollIndicator = false
         cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = kCategoriesBackgroundColor
+        cv.backgroundColor = .clear
         return cv
     }()
     
     private let categoryView: CategoryListView = {
-        return CategoryListView()
+        let cv = CategoryListView()
+        cv.backgroundColor = kCategoriesBackgroundColor
+        return cv
     }()
     
+    private let activityIndicator = LoadingIndicator.shared
+    
     private var presenter: HomeMainPresenterProtocol!
+    private let headerIdentifier = "header"
+    private let cellIdentifier = "cell"
     
     //MARK: Initialization
     required init?(coder aDecoder: NSCoder) {
@@ -63,9 +61,8 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
         super.viewDidLoad()
         self.view.backgroundColor = kHomeBackgroundColor
         
-        setupSearchController()
-        setupCategories()
-        setupMainView()
+        setupView()
+        applyConstraints()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +80,7 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
     }
     
     func goToDetailsView(forItem item: Item) {
-        let vc = ProductDetailsMainViewController()
+        let vc = ProductDetailsMainViewController(withItem: item, usingPresenter: ProductDetailsMainViewPresenter())
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -94,40 +91,50 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
         //TODO
     }
     
+    func showLoadingIndicator() {
+        view.addSubview(activityIndicator)
+    }
+    
+    func hideLoadingIndicator() {
+        activityIndicator.removeFromSuperview()
+    }
+    
     //MARK: Internal
     private func setupSearchController() {
-        search.searchResultsUpdater = self
         self.definesPresentationContext = true
         search.dimsBackgroundDuringPresentation = false
         search.obscuresBackgroundDuringPresentation = false
         search.hidesNavigationBarDuringPresentation = false
+        search.searchBar.delegate = self
         self.navigationItem.titleView = search.searchBar
     }
     
-    private func setupCategories() {
-        categoryView.delegate = self
-        view.addSubview(categoryView)
+    private func setupView() {
+        setupSearchController()
         
-        categoryView.snp.makeConstraints { (make) in
+        categoryView.delegate = self
+        //view.addSubview(categoryView)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(CategoryListView.self, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
+        view.addSubview(collectionView)
+    }
+    
+    private func applyConstraints() {
+        //        categoryView.snp.makeConstraints { (make) in
+        //            make.top.equalTo(scrollView).inset(2)
+        //            make.left.right.equalTo(view)
+        //            make.height.equalTo(90)
+        //        }
+        collectionView.snp.makeConstraints { (make) in
             if #available(iOS 11, *) {
                 make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
             } else {
                 make.top.equalTo(view)
             }
-            make.left.right.equalTo(view)
-            make.height.equalTo(90)
-        }
-    }
-    
-    private func setupMainView() {
-        collectionView.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        view.addSubview(collectionView)
-        
-        collectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(categoryView.snp.bottom)
-            make.left.bottom.right.equalToSuperview().inset(5)
+            make.left.bottom.right.equalTo(view).inset(5)
         }
     }
 }
@@ -144,38 +151,46 @@ extension HomeMainViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemCollectionViewCell
         
         let anItem = itemsList![indexPath.row]
-        
-        cell.backgroundColor = .yellow
+        cell.alpha = 0
+        cell.backgroundColor = .white
         cell.imageURL = anItem.thumbnail
         cell.priceLabel.text = String(anItem.price)
         cell.descriptionLabel.text = anItem.title
+        
+        UIView.animate(withDuration: 0.5) {
+            cell.alpha = 1
+        }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter.touched(item: itemsList![indexPath.row])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var headerView: CategoryListView? = nil
+        if kind ==  UICollectionElementKindSectionHeader {
+            headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as? CategoryListView
+        }
+        return headerView!
     }
 }
 
 extension HomeMainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let widthPerItem = view.frame.width / 2 - ((collectionViewLayout as? UICollectionViewFlowLayout)?.minimumInteritemSpacing ?? 0.0)
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        return CGSize(width: widthPerItem, height: widthPerItem * 1.15)
     }
 }
 
-extension HomeMainViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text else {
+extension HomeMainViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        guard let query = searchBar.text, query.count > 0 else {
             return
         }
-        if searchText.count > 0 {
-            itemsFiltered?.removeAll()
-            let array = itemsList?.filter {
-                return $0.title.lowercased().contains(searchText.lowercased())
-            }
-            itemsFiltered = array
-        } else { //Reset to the original state
-            if searchController.isActive {
-                itemsFiltered = itemsList
-            }
-        }
+        self.presenter.searchingForText(query)
     }
 }
 

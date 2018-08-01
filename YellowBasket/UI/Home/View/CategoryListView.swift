@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryListView: UIView {
+class CategoryListView: UICollectionReusableView {
     
     private let stackView: UIStackView = {
         let sv = UIStackView(frame: .zero)
@@ -60,7 +60,8 @@ class CategoryListView: UIView {
         }
         
         stackView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.bottom.equalTo(self)
+            make.left.right.equalTo(scrollView)
         }
     }
     

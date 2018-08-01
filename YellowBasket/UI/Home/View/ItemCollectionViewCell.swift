@@ -36,7 +36,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     var imageURL: String {
         didSet {
-            imageView.af_setImage(withURL: URL(string: imageURL)!)
+            if imageURL.count > 0 {
+                imageView.af_setImage(withURL: URL(string: imageURL)!)
+            } else {
+                imageView.image = nil
+            }
         }
     }
 
@@ -71,6 +75,9 @@ class ItemCollectionViewCell: UICollectionViewCell {
             make.top.equalTo(priceLabel.snp.bottom).offset(2)
             make.left.right.equalTo(priceLabel)
         }
+        
+        layer.cornerRadius = 7.0
+        layer.masksToBounds = true
     }
     
     

@@ -26,6 +26,7 @@ struct Item: Decodable {
     let quantity: Int
     let condition: String
     let thumbnail: String
+    let images: [Pictures]?
     
     enum CodingKeys : String, CodingKey {
         case identifier = "id"
@@ -35,5 +36,15 @@ struct Item: Decodable {
         case quantity = "available_quantity"
         case condition
         case thumbnail
+        case images = "pictures"
+    }
+}
+
+struct Pictures: Decodable {
+    
+    let url: String
+    
+    enum CodingKeys : String, CodingKey {
+        case url = "secure_url"
     }
 }

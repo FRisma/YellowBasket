@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 let baseURL = "https://api.mercadolibre.com"
-let trends = "%s/sites/%s/trends/search" //https://api.mercadolibre.com/sites/MLA/trends/search
 
 class MercadoLibreProvider: ProviderBaseClass, ProviderProtocol {
 
@@ -63,10 +62,20 @@ class MercadoLibreProvider: ProviderBaseClass, ProviderProtocol {
         }) { completion(nil,$0) }
     }
     
+    func getItemDescription(withRequest request: Request, completion: @escaping (ItemDescription?, Error?) -> Void) {
+        call(endpoint: baseURL, request: request, onSuccess: { (responseString) in
+            guard let description = try? JSONDecoder().decode(Array<ItemDescription>.self, from: responseString.data(using: String.Encoding.utf8)!) else {
+                print("Error: Couldn't decode data into ItemDescription")
+                return completion(nil,NSError() as Error)
+            }
+            completion(description.first,nil)
+        }) { completion(nil,$0) }
+    }
+    
     func getCategories(withRequest request: Request, completion: @escaping ([Category]?, Error?) -> Void) {
         call(endpoint: baseURL, request: request, onSuccess: { (responseString) in
             guard let result = try? JSONDecoder().decode(Array<Category>.self, from: responseString.data(using: String.Encoding.utf8)!) else {
-                print("Error: Couldn't decode data into Items Array")
+                print("Error: Couldn't decode data into Category Array")
                 return completion(nil,NSError() as Error)
             }
             completion(result,nil)

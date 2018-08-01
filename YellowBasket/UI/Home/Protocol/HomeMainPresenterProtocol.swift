@@ -13,5 +13,8 @@ protocol HomeMainPresenterProtocol {
     func setViewDelegate(delegate: HomeMainControllerProtocol)
     
     func touched(category: Category)
+    
     func touched(item: Item)
+    
+    func searchingForText(_ text: String)
 }

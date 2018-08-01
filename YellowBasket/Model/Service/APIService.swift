@@ -35,6 +35,11 @@ class APIService {
         provider.getItemDetail(withRequest: request) { ($1 != nil) ? onFailure($1!) : onSuccess($0!) }
     }
     
+    func getDescription(forItem item: Item, onSuccess:@escaping (ItemDescription) -> Void, onFailure:@escaping (Error) -> Void) {
+        let request = ItemDescriptionRequest(withItemId: item.identifier)
+        provider.getItemDescription(withRequest: request) { ($1 != nil) ? onFailure($1!) : onSuccess($0!) }
+    }
+    
     func getCategories(onSuccess:@escaping ([Category]) -> Void, onFailure:@escaping (Error) -> Void) {
         let request = CategoriesRequest(forCountryKey: "MLA")
         provider.getCategories(withRequest: request) { ($1 != nil) ? onFailure($1!) : onSuccess($0!) }

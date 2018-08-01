@@ -13,7 +13,7 @@ class LoadingIndicator: UIView {
     
     static let shared = LoadingIndicator()
     
-    let loadingIndicator: UIActivityIndicatorView!
+    private let loadingIndicator: UIActivityIndicatorView!
     
     override private init(frame: CGRect) {
         loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
