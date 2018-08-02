@@ -130,8 +130,8 @@ extension HomeMainViewController: UICollectionViewDataSource {
         let anItem = itemsList![indexPath.row]
         cell.alpha = 0
         cell.backgroundColor = .white
-        cell.imageURL = anItem.thumbnail
-        cell.priceLabel.text = String.convert(toMoneyFromDouble: anItem.price)
+        cell.imageURL = anItem.thumbnail!
+        cell.priceLabel.text = String.convert(toMoneyFromDouble: anItem.price ?? 0)
         cell.descriptionLabel.text = anItem.title
         
         UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {

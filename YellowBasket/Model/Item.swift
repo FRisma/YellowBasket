@@ -20,12 +20,12 @@ struct Items: Decodable {
 struct Item: Decodable {
     
     let identifier: String
-    let title: String
-    let price: Double
-    let currencyId: String
-    let quantity: Int
-    let condition: String
-    let thumbnail: String
+    let title: String?
+    let price: Double?
+    let currencyId: String?
+    let quantity: Int?
+    let condition: String?
+    let thumbnail: String?
     let images: [Pictures]?
     let sharingURL: String?
     

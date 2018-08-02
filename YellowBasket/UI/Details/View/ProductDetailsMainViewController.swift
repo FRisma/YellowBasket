@@ -107,7 +107,7 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
     
     func detailsImageView(priceForProductInView: DetailsImageAndTitleView) -> String {
         if let product = displayingProduct {
-            return String.convert(toMoneyFromDouble: product.price)
+            return String.convert(toMoneyFromDouble: product.price ?? 0)
         }
         return "N/A"
     }
