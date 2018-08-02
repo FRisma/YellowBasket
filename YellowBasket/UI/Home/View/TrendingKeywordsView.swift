@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol TrendingKeywordsViewDelegate {
-    
-    func tapped(onKeyword keyword: String)
-}
-
 class TrendingKewyordsView: UIView {
 
     var delegate: TrendingKeywordsViewDelegate?
@@ -56,6 +51,8 @@ class TrendingKewyordsView: UIView {
         for title in titles {
             let button = UIButton(type: .custom)
             button.setTitle(title, for: .normal)
+            button.setTitleColor(.black, for: .normal)
+            button.titleLabel?.numberOfLines = 1
             button.addTarget(self, action: #selector(self.pressButton(_:)), for: .touchUpInside)
             stackView.addArrangedSubview(button)
         }
