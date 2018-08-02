@@ -8,7 +8,9 @@
 
 import UIKit
 
-class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
+class HomeMainViewController: UIViewController, HomeMainControllerProtocol, TrendingKeywordsViewDelegate {
+    
+    private var keywordsView: TrendingKewyordsView?
     
     private var itemsList: [Item]? {
         didSet {
@@ -54,6 +56,7 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
     
     //MARK: HomeMainControllerProtocol
     func update(products: [Item]) {
+        keywordsView?.removeFromSuperview()
         self.itemsList = products
     }
     
@@ -79,6 +82,22 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
     
     func hideLoadingIndicator() {
         activityIndicator.removeFromSuperview()
+    }
+    
+    func showTrendingKeywordsView(withElements elements:[String]) {
+        keywordsView = TrendingKewyordsView(withKeys: elements)
+        keywordsView!.delegate = self
+        view.addSubview(keywordsView!)
+        view.bringSubview(toFront: keywordsView!)
+        
+        keywordsView!.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    //MARK: TrendingKeywordsViewDelegate
+    func tapped(onKeyword keyword: String) {
+        self.presenter.searchingForText(keyword)
     }
     
     //MARK: Internal
@@ -109,10 +128,6 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
             }
             make.left.bottom.right.equalTo(view).inset(5)
         }
-    }
-    
-    @objc private func switchCountry() {
-        print("cambio pais")
     }
 }
 

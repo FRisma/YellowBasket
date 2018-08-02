@@ -26,6 +26,7 @@
 		CE2CCB4621133C7900BDB444 /* CountrySelectionMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CCB4521133C7900BDB444 /* CountrySelectionMessageView.swift */; };
 		CE690ABE2112148A0032B96F /* DetailsImageAndTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE690ABD2112148A0032B96F /* DetailsImageAndTitleView.swift */; };
 		CE690AC0211223900032B96F /* DetailsImageAndTitleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE690ABF211223900032B96F /* DetailsImageAndTitleViewProtocol.swift */; };
+		CEE54671211383B4000BCF27 /* TrendingKeywordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE54670211383B3000BCF27 /* TrendingKeywordsView.swift */; };
 		CEED1F98210DFF3300F32002 /* ProviderBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F97210DFF3300F32002 /* ProviderBaseClass.swift */; };
 		CEED1F9B210E051200F32002 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F9A210E051200F32002 /* Request.swift */; };
 		CEED1F9D210E2D4B00F32002 /* CountrySearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F9C210E2D4B00F32002 /* CountrySearchRequest.swift */; };
@@ -87,6 +88,7 @@
 		CE2CCB4521133C7900BDB444 /* CountrySelectionMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionMessageView.swift; sourceTree = "<group>"; };
 		CE690ABD2112148A0032B96F /* DetailsImageAndTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsImageAndTitleView.swift; sourceTree = "<group>"; };
 		CE690ABF211223900032B96F /* DetailsImageAndTitleViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsImageAndTitleViewProtocol.swift; sourceTree = "<group>"; };
+		CEE54670211383B3000BCF27 /* TrendingKeywordsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingKeywordsView.swift; sourceTree = "<group>"; };
 		CEED1F97210DFF3300F32002 /* ProviderBaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderBaseClass.swift; sourceTree = "<group>"; };
 		CEED1F9A210E051200F32002 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		CEED1F9C210E2D4B00F32002 /* CountrySearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchRequest.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				CE0B47C9210BC1ED009DEC4F /* HomeMainViewController.swift */,
 				CEED1FB1210FCBA400F32002 /* ItemCollectionViewCell.swift */,
+				CEE54670211383B3000BCF27 /* TrendingKeywordsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				CEED1FC82111204700F32002 /* ProductDetailsMainPresenterProtocol.swift in Sources */,
 				CE0B47C8210BB145009DEC4F /* Utils.swift in Sources */,
 				CEED1FA6210EB34500F32002 /* TrendingKeywordsRequest.swift in Sources */,
+				CEE54671211383B4000BCF27 /* TrendingKeywordsView.swift in Sources */,
 				CEED1FCC21112ECE00F32002 /* ItemDescriptionRequest.swift in Sources */,
 				CE0B47D0210BC320009DEC4F /* ProductDetailsMainViewPresenter.swift in Sources */,
 				CEED1F9F210E2E6B00F32002 /* RequestBuilder.swift in Sources */,

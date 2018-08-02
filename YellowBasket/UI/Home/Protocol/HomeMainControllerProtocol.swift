@@ -18,6 +18,8 @@ protocol HomeMainControllerProtocol {
     
     func showErrorMessage(message: String)
     
+    func showTrendingKeywordsView(withElements elements: [String])
+    
     func showLoadingIndicator()
     
     func hideLoadingIndicator()

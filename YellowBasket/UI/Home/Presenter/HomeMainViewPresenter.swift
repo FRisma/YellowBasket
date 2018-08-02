@@ -35,7 +35,16 @@ class HomeMainViewPresenter: HomeMainPresenterProtocol {
     
     //MARK: Internal
     private func work() {
-        performSearchForString("Freddie Mercury")
+        APIService.shared.getTrendingKeywords(onSuccess: { (trendingArray) in
+            
+            var terms = [String]()
+            for trending in trendingArray.prefix(5) {
+                terms.append(trending.term)
+            }
+            self.viewDelegate?.showTrendingKeywordsView(withElements: terms)
+        }) { (error) in
+            puts("error")
+        }
     }
     
     private func performSearchForString(_ text: String) {
