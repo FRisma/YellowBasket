@@ -107,9 +107,9 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
     
     func detailsImageView(priceForProductInView: DetailsImageAndTitleView) -> String {
         if let product = displayingProduct {
-            return String(product.price)
+            return String.convert(toMoneyFromDouble: product.price)
         }
-        return ""
+        return "N/A"
     }
     
     func carouselImageTapped() {

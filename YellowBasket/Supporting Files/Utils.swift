@@ -110,3 +110,12 @@ extension UserDefaults {
         return true
     }
 }
+
+/**
+ * @brief Extension for displaying doubles into string with 2 decimals
+ */
+extension String {
+    static func convert(toMoneyFromDouble double: Double) -> String {
+        return String(format: "$ %.2f", double) //$ should be customizable
+    }
+}

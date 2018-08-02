@@ -16,17 +16,10 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
         }
     }
     
-    private var categories: [Category]? {
-        didSet {
-            self.categoryView.reloadData()
-        }
-    }
-    
     private let search = UISearchController(searchResultsController: nil)
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.headerReferenceSize = CGSize(width: 50, height: 100)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.showsVerticalScrollIndicator = false
         cv.showsHorizontalScrollIndicator = false
@@ -34,16 +27,9 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
         return cv
     }()
     
-    private let categoryView: CategoryListView = {
-        let cv = CategoryListView()
-        cv.backgroundColor = kCategoriesBackgroundColor
-        return cv
-    }()
-    
     private let activityIndicator = LoadingIndicator.shared
     
     private var presenter: HomeMainPresenterProtocol!
-    private let headerIdentifier = "header"
     private let cellIdentifier = "cell"
     
     //MARK: Initialization
@@ -67,10 +53,6 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
     }
     
     //MARK: HomeMainControllerProtocol
-    func update(categories: [Category]) {
-        self.categories = categories
-    }
-    
     func update(products: [Item]) {
         self.itemsList = products
     }
@@ -112,30 +94,25 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
     private func setupView() {
         setupSearchController()
         
-        categoryView.delegate = self
-        //view.addSubview(categoryView)
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
-        collectionView.register(CategoryListView.self, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
         view.addSubview(collectionView)
     }
     
     private func applyConstraints() {
-        //        categoryView.snp.makeConstraints { (make) in
-        //            make.top.equalTo(scrollView).inset(2)
-        //            make.left.right.equalTo(view)
-        //            make.height.equalTo(90)
-        //        }
         collectionView.snp.makeConstraints { (make) in
             if #available(iOS 11, *) {
-                make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
+                make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin).offset(5)
             } else {
-                make.top.equalTo(view)
+                make.top.equalTo(view).offset(5)
             }
             make.left.bottom.right.equalTo(view).inset(5)
         }
+    }
+    
+    @objc private func switchCountry() {
+        print("cambio pais")
     }
 }
 
@@ -154,7 +131,7 @@ extension HomeMainViewController: UICollectionViewDataSource {
         cell.alpha = 0
         cell.backgroundColor = .white
         cell.imageURL = anItem.thumbnail
-        cell.priceLabel.text = String(anItem.price)
+        cell.priceLabel.text = String.convert(toMoneyFromDouble: anItem.price)
         cell.descriptionLabel.text = anItem.title
         
         UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
@@ -166,14 +143,6 @@ extension HomeMainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.presenter.touched(item: itemsList![indexPath.row])
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        var headerView: CategoryListView? = nil
-        if kind ==  UICollectionElementKindSectionHeader {
-            headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as? CategoryListView
-        }
-        return headerView!
     }
 }
 
@@ -191,21 +160,5 @@ extension HomeMainViewController: UISearchBarDelegate {
             return
         }
         self.presenter.searchingForText(query)
-    }
-}
-
-extension HomeMainViewController: CategoryListViewDelegate {
-    
-    func categoryList(numbersOfElementsInCategoryView categoryView: CategoryListView) -> Int {
-        guard let categories = categories else {
-            return 0
-        }
-        return (categories.count > 5) ? 5 : categories.count
-    }
-    
-    func categoryList(_ categoryView: CategoryListView, viewForElementAtIndex index: Int) -> UIView {
-        let label = UILabel()
-        label.text = categories![index].name
-        return label
     }
 }

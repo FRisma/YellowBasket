@@ -39,8 +39,6 @@
 		CEED1FB2210FCBA400F32002 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FB1210FCBA400F32002 /* ItemCollectionViewCell.swift */; };
 		CEED1FB4210FDE3C00F32002 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FB3210FDE3C00F32002 /* LoadingIndicator.swift */; };
 		CEED1FB62110981C00F32002 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FB52110981C00F32002 /* Category.swift */; };
-		CEED1FB82110989D00F32002 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FB72110989D00F32002 /* CategoryListView.swift */; };
-		CEED1FBB21109BEA00F32002 /* CategoryListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FBA21109BEA00F32002 /* CategoryListViewDelegate.swift */; };
 		CEED1FBD2110A53100F32002 /* CategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FBC2110A53100F32002 /* CategoriesRequest.swift */; };
 		CEED1FBF2110B46200F32002 /* HomeMainControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FBE2110B46200F32002 /* HomeMainControllerProtocol.swift */; };
 		CEED1FC12110B47600F32002 /* HomeMainPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1FC02110B47600F32002 /* HomeMainPresenterProtocol.swift */; };
@@ -102,8 +100,6 @@
 		CEED1FB1210FCBA400F32002 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEED1FB3210FDE3C00F32002 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		CEED1FB52110981C00F32002 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		CEED1FB72110989D00F32002 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
-		CEED1FBA21109BEA00F32002 /* CategoryListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewDelegate.swift; sourceTree = "<group>"; };
 		CEED1FBC2110A53100F32002 /* CategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRequest.swift; sourceTree = "<group>"; };
 		CEED1FBE2110B46200F32002 /* HomeMainControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainControllerProtocol.swift; sourceTree = "<group>"; };
 		CEED1FC02110B47600F32002 /* HomeMainPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -240,7 +236,6 @@
 			children = (
 				CE0B47C9210BC1ED009DEC4F /* HomeMainViewController.swift */,
 				CEED1FB1210FCBA400F32002 /* ItemCollectionViewCell.swift */,
-				CEED1FB72110989D00F32002 /* CategoryListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,7 +352,6 @@
 		CEED1FB921109BD100F32002 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				CEED1FBA21109BEA00F32002 /* CategoryListViewDelegate.swift */,
 				CEED1FBE2110B46200F32002 /* HomeMainControllerProtocol.swift */,
 				CEED1FC02110B47600F32002 /* HomeMainPresenterProtocol.swift */,
 			);
@@ -590,12 +584,10 @@
 			files = (
 				CEED1FAC210EBDF100F32002 /* Item.swift in Sources */,
 				CEED1FAE210EC4D600F32002 /* ItemsRequest.swift in Sources */,
-				CEED1FBB21109BEA00F32002 /* CategoryListViewDelegate.swift in Sources */,
 				CEED1FB0210EC4E400F32002 /* ItemRequest.swift in Sources */,
 				CE0B47CC210BC213009DEC4F /* HomeMainViewPresenter.swift in Sources */,
 				CEED1FBD2110A53100F32002 /* CategoriesRequest.swift in Sources */,
 				CE690ABE2112148A0032B96F /* DetailsImageAndTitleView.swift in Sources */,
-				CEED1FB82110989D00F32002 /* CategoryListView.swift in Sources */,
 				CEED1FC62111202D00F32002 /* ProductDetailsMainControllerProtocol.swift in Sources */,
 				CEED1FB2210FCBA400F32002 /* ItemCollectionViewCell.swift in Sources */,
 				CEED1FC12110B47600F32002 /* HomeMainPresenterProtocol.swift in Sources */,

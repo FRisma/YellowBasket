@@ -9,8 +9,6 @@
 import Foundation
 
 protocol HomeMainControllerProtocol {
-
-    func update(categories: [Category])
     
     func update(products: [Item])
     

@@ -35,7 +35,6 @@ class HomeMainViewPresenter: HomeMainPresenterProtocol {
     
     //MARK: Internal
     private func work() {
-        getAvailableCategories()
         performSearchForString("Freddie Mercury")
     }
     
@@ -48,20 +47,6 @@ class HomeMainViewPresenter: HomeMainPresenterProtocol {
                 return
             }
             self.viewDelegate?.update(products: itemsArray)
-        }) { (error) in
-            self.viewDelegate?.hideLoadingIndicator()
-            self.viewDelegate?.showErrorMessage(message: "Algo salió mal")
-        }
-    }
-    
-    private func getAvailableCategories() {
-        viewDelegate?.showLoadingIndicator()
-        APIService.shared.getCategories(onSuccess: { (categoriesArray) in
-            if categoriesArray.isEmpty {
-                self.viewDelegate?.showErrorMessage(message: "No hay categorias")
-                return
-            }
-            self.viewDelegate?.update(categories: categoriesArray)
         }) { (error) in
             self.viewDelegate?.hideLoadingIndicator()
             self.viewDelegate?.showErrorMessage(message: "Algo salió mal")

@@ -41,7 +41,6 @@ class MercadoLibreProvider: ProviderBaseClass, ProviderProtocol {
         }) { completion(nil,$0) }
     }
     
-    //https://api.mercadolibre.com/sites/MLA/search?q=ipod
     func getItems(withRequest request: Request, completion: @escaping ([Item]?, Error?) -> Void) {
         call(endpoint: baseURL, request: request, onSuccess: { (responseString) in
             guard let result = try? JSONDecoder().decode(Items.self, from: responseString.data(using: String.Encoding.utf8)!) else {
@@ -55,7 +54,7 @@ class MercadoLibreProvider: ProviderBaseClass, ProviderProtocol {
     func getItemDetail(withRequest request: Request, completion: @escaping (Item?, Error?) -> Void) {
         call(endpoint: baseURL, request: request, onSuccess: { (responseString) in
             guard let itemDetail = try? JSONDecoder().decode(Item.self, from: responseString.data(using: String.Encoding.utf8)!) else {
-                print("Error: Couldn't decode data into Items Array")
+                print("Error: Couldn't decode data into Items Details")
                 return completion(nil,NSError() as Error)
             }
             completion(itemDetail,nil)
