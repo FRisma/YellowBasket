@@ -18,22 +18,37 @@ class CountrySelectionMainViewController: UIViewController, UITableViewDelegate,
     }
     
     private var tableView: UITableView = {
-        return UITableView(frame: .zero)
+        let tv = UITableView(frame: .zero)
+        tv.register(UITableViewCell.self, forCellReuseIdentifier: "country")
+        tv.tableFooterView = UIView()
+        tv.backgroundColor = kLaunchScreenTopColor
+        return tv
     }()
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .red
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "country")
+        self.view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.tableFooterView = UIView()
+        
+        let mainMessageView = CountrySelectionMessageView()
+        
+        view.addSubview(mainMessageView)
         view.addSubview(tableView)
         
+        mainMessageView.snp.makeConstraints { (make) in
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(60)
+        }
+        
         tableView.snp.makeConstraints { (make) in
-            make.edges.equalTo(view)
+            make.top.equalTo(mainMessageView.snp.bottom)
+            make.left.right.bottom.equalToSuperview()
         }
     }
     
@@ -50,18 +65,9 @@ class CountrySelectionMainViewController: UIViewController, UITableViewDelegate,
         }
     }
     
-
     // MARK: - UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return availableCountries.count
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.alpha = 0
-        UIView.animate(withDuration: 0.3) {
-            cell.alpha = 1
-            cell.layoutIfNeeded()
-        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

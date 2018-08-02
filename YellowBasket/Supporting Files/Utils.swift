@@ -14,7 +14,7 @@ import UIKit
  * Language
  */
 
-let kITLang = "lang"
+let kITLang = "some langs displayed to the user"
 
 /**
  * Style
@@ -76,7 +76,6 @@ extension UIView {
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 }
-
 
 class GradientColors {
     var layer:CAGradientLayer!

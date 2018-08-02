@@ -22,11 +22,11 @@ class APIService {
     }
     
     func getTrendingKeywords(onSuccess:@escaping ([TrendingKeyword]) -> Void, onFailure:@escaping (Error) -> Void) {
-        provider.getTrendingKeywords(withRequest: TrendingKeywordsRequest(forCountryKey: "MLA")) { ($1 != nil) ? onFailure($1!) : onSuccess($0!) }
+        provider.getTrendingKeywords(withRequest: TrendingKeywordsRequest(forCountryKey: UserDefaults.standard.getSelectedCountry())) { ($1 != nil) ? onFailure($1!) : onSuccess($0!) }
     }
     
     func getItems(forQuery query: String, onSuccess:@escaping ([Item]) -> Void, onFailure:@escaping (Error) -> Void) {
-        let request = ItemsRequest(withQueryParam: query, forCountryKey: "MLA")
+        let request = ItemsRequest(withQueryParam: query, forCountryKey: UserDefaults.standard.getSelectedCountry())
         provider.getItems(withRequest: request) { ($1 != nil) ? onFailure($1!) : onSuccess($0!) }
     }
     
@@ -41,7 +41,7 @@ class APIService {
     }
     
     func getCategories(onSuccess:@escaping ([Category]) -> Void, onFailure:@escaping (Error) -> Void) {
-        let request = CategoriesRequest(forCountryKey: "MLA")
+        let request = CategoriesRequest(forCountryKey: UserDefaults.standard.getSelectedCountry())
         provider.getCategories(withRequest: request) { ($1 != nil) ? onFailure($1!) : onSuccess($0!) }
     }
     

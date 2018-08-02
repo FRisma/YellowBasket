@@ -23,9 +23,9 @@
 		CE0B47D6210BC3D5009DEC4F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D5210BC3D5009DEC4F /* APIService.swift */; };
 		CE0B47D9210BC799009DEC4F /* CountrySelectionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */; };
 		CE0B47DE210BCB38009DEC4F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47DD210BCB38009DEC4F /* Country.swift */; };
+		CE2CCB4621133C7900BDB444 /* CountrySelectionMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2CCB4521133C7900BDB444 /* CountrySelectionMessageView.swift */; };
 		CE690ABE2112148A0032B96F /* DetailsImageAndTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE690ABD2112148A0032B96F /* DetailsImageAndTitleView.swift */; };
 		CE690AC0211223900032B96F /* DetailsImageAndTitleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE690ABF211223900032B96F /* DetailsImageAndTitleViewProtocol.swift */; };
-		CEED1F96210BF2D900F32002 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F95210BF2D900F32002 /* MainNavigationController.swift */; };
 		CEED1F98210DFF3300F32002 /* ProviderBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F97210DFF3300F32002 /* ProviderBaseClass.swift */; };
 		CEED1F9B210E051200F32002 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F9A210E051200F32002 /* Request.swift */; };
 		CEED1F9D210E2D4B00F32002 /* CountrySearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED1F9C210E2D4B00F32002 /* CountrySearchRequest.swift */; };
@@ -86,9 +86,9 @@
 		CE0B47D5210BC3D5009DEC4F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionMainViewController.swift; sourceTree = "<group>"; };
 		CE0B47DD210BCB38009DEC4F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		CE2CCB4521133C7900BDB444 /* CountrySelectionMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionMessageView.swift; sourceTree = "<group>"; };
 		CE690ABD2112148A0032B96F /* DetailsImageAndTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsImageAndTitleView.swift; sourceTree = "<group>"; };
 		CE690ABF211223900032B96F /* DetailsImageAndTitleViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsImageAndTitleViewProtocol.swift; sourceTree = "<group>"; };
-		CEED1F95210BF2D900F32002 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		CEED1F97210DFF3300F32002 /* ProviderBaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderBaseClass.swift; sourceTree = "<group>"; };
 		CEED1F9A210E051200F32002 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		CEED1F9C210E2D4B00F32002 /* CountrySearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySearchRequest.swift; sourceTree = "<group>"; };
@@ -211,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */,
-				CEED1F95210BF2D900F32002 /* MainNavigationController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -317,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0B47D8210BC799009DEC4F /* CountrySelectionMainViewController.swift */,
+				CE2CCB4521133C7900BDB444 /* CountrySelectionMessageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -602,10 +602,10 @@
 				CE0B47BF210BB082009DEC4F /* LaunchViewController.swift in Sources */,
 				CEED1FCA21112D3B00F32002 /* ItemDescription.swift in Sources */,
 				CE0B47D9210BC799009DEC4F /* CountrySelectionMainViewController.swift in Sources */,
+				CE2CCB4621133C7900BDB444 /* CountrySelectionMessageView.swift in Sources */,
 				CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */,
 				CEED1F98210DFF3300F32002 /* ProviderBaseClass.swift in Sources */,
 				CEED1F9D210E2D4B00F32002 /* CountrySearchRequest.swift in Sources */,
-				CEED1F96210BF2D900F32002 /* MainNavigationController.swift in Sources */,
 				CE0B47CA210BC1ED009DEC4F /* HomeMainViewController.swift in Sources */,
 				CEED1FB4210FDE3C00F32002 /* LoadingIndicator.swift in Sources */,
 				CE0B47CE210BC30F009DEC4F /* ProductDetailsMainViewController.swift in Sources */,

@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.barTintColor = kLaunchScreenTopColor
         
         window = UIWindow()
-        window?.rootViewController = MainNavigationController()
+        window?.rootViewController = LaunchViewController()
         window?.makeKeyAndVisible()
         
         return true

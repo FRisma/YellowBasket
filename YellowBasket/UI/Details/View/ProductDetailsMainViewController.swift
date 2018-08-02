@@ -68,7 +68,10 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
     
     //MARK: ProductDetailsMainControllerProtocol
     func showErrorMessage(message: String) {
-        //TODO
+        let alertController = UIAlertController(title: "Oops...", message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true)
     }
     
     func showLoadingIndicator() {

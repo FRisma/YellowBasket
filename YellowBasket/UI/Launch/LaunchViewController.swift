@@ -39,9 +39,17 @@ class LaunchViewController: UIViewController {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            let navController = MainNavigationController(rootViewController:HomeMainViewController(withPresenter: HomeMainViewPresenter()))
-            self.present(navController, animated: false, completion: nil)
+            if !self.hasSetACountry() {
+                self.present(CountrySelectionMainViewController(), animated: true, completion: nil)
+            } else {
+                let nc = UINavigationController(rootViewController: HomeMainViewController(withPresenter: HomeMainViewPresenter()))
+                self.present(nc, animated: true, completion: nil)
+            }
         }
     }
-
+    
+    private func hasSetACountry() -> Bool {
+        return UserDefaults.standard.hasSelectedACountry()
+        
+    }
 }

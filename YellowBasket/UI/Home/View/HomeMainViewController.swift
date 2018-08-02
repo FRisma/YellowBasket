@@ -81,10 +81,14 @@ class HomeMainViewController: UIViewController, HomeMainControllerProtocol {
     }
     
     func goToDetailsView(forCategory category: Category) {
+        //TODO
     }
     
     func showErrorMessage(message: String) {
-        //TODO
+        let alertController = UIAlertController(title: "Oops...", message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true)
     }
     
     func showLoadingIndicator() {
@@ -181,7 +185,6 @@ extension HomeMainViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension HomeMainViewController: UISearchBarDelegate {
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         guard let query = searchBar.text, query.count > 0 else {
