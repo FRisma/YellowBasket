@@ -10,7 +10,7 @@ import UIKit
 
 class TrendingKewyordsView: UIView {
 
-    var delegate: TrendingKeywordsViewDelegate?
+    weak var delegate: TrendingKeywordsViewDelegate?
     
     private var titles = [String]()
     

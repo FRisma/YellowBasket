@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol TrendingKeywordsViewDelegate {
+protocol TrendingKeywordsViewDelegate: AnyObject {
     func tapped(onKeyword keyword: String)
 }
