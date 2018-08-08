@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HomeMainControllerProtocol {
+protocol HomeMainControllerProtocol: AnyObject {
     
     func update(products: [Item])
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ProductDetailsMainControllerProtocol {
+protocol ProductDetailsMainControllerProtocol: AnyObject {
     
     func showErrorMessage(message: String)
     

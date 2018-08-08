@@ -10,7 +10,7 @@ import Foundation
 
 class HomeMainViewPresenter: HomeMainPresenterProtocol {
     
-    private var viewDelegate: HomeMainControllerProtocol? {
+    private weak var viewDelegate: HomeMainControllerProtocol? {
         didSet {
             work()
         }

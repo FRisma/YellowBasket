@@ -127,7 +127,7 @@ class ProductDetailsMainViewController: UIViewController, ProductDetailsMainCont
         imageAndTitleView.snp.makeConstraints { (make) in
             make.top.equalTo(scrollView)
             make.left.right.equalTo(view)
-            make.height.equalTo(view.snp.height).multipliedBy(0.6)
+            make.height.greaterThanOrEqualTo(view).multipliedBy(0.4)
         }
         
         descriptionLabel.snp.makeConstraints { (make) in

@@ -12,7 +12,7 @@ class ProductDetailsMainViewPresenter: ProductDetailsMainPresenterProtocol {
     
     private var product: Item?
     
-    private var viewDelegate: ProductDetailsMainControllerProtocol? {
+    private weak var viewDelegate: ProductDetailsMainControllerProtocol? {
         didSet {
             work()
         }

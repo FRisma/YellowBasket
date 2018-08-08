@@ -78,7 +78,7 @@ class DetailsImageAndTitleView: UIView {
         
         carouselPreview.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-            make.height.equalTo(self.snp.height).multipliedBy(0.5)
+            make.height.equalToSuperview().multipliedBy(0.5)
         }
         
         titleLabel.snp.makeConstraints { (make) in

@@ -73,6 +73,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalTo(priceLabel.snp.bottom).offset(2)
             make.left.right.equalTo(priceLabel)
+            make.bottom.lessThanOrEqualToSuperview()
         }
         
         layer.cornerRadius = 7.5
