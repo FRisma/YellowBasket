@@ -386,7 +386,6 @@
 				CE0B4794210BAF00009DEC4F /* Frameworks */,
 				CE0B4795210BAF00009DEC4F /* Resources */,
 				B6BBAA49932B43D874DFF53E /* [CP] Embed Pods Frameworks */,
-				24436927EE44FF597C84F5AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -405,8 +404,6 @@
 				CE0B47A7210BAF03009DEC4F /* Sources */,
 				CE0B47A8210BAF03009DEC4F /* Frameworks */,
 				CE0B47A9210BAF03009DEC4F /* Resources */,
-				60C1F3C9BB3477B61A8D4076 /* [CP] Embed Pods Frameworks */,
-				7C9DD72A980C1957B7DE65FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,51 +473,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24436927EE44FF597C84F5AC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		60C1F3C9BB3477B61A8D4076 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C9DD72A980C1957B7DE65FD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		95F88C739359760A1C3DBAA5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,23 +496,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E212ECC100EAEC15966C4AA6 /* [CP] Check Pods Manifest.lock */ = {
