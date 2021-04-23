@@ -6,6 +6,7 @@
 //  Copyright © 2021 FRisma. All rights reserved.
 //
 
+@testable import YellowBasket
 import XCTest
 
 class YellowBasketTests: XCTestCase {
@@ -18,9 +19,11 @@ class YellowBasketTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testStringExtension() throws {
+        let someMoney: Double = 2
+        let resultString = String.convert(toMoneyFromDouble: someMoney)
+        
+        XCTAssertEqual(resultString, "$ 2.00", "Failed conversion")
     }
 
     func testPerformanceExample() throws {
