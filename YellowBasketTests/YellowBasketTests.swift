@@ -32,6 +32,13 @@ class YellowBasketTests: XCTestCase {
         
         XCTAssertEqual(resultString, "$ 3.00", "Failed conversion")
     }
+    
+    func testNewrStringExtension() throws {
+        let someMoney: Double = 7
+        let resultString = String.convert(toMoneyFromDouble: someMoney)
+        
+        XCTAssertEqual(resultString, "$ 7.00", "Failed conversion")
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
