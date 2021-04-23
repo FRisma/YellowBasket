@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		316559EE11B24ECECEDB3AD4 /* Pods_YellowBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */; };
-		A1CEBC023F04E209436A9788 /* Pods_YellowBasketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */; };
+		68087F545FCFA1C20F2488C3 /* Pods_YellowBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1611E6054AA9A4B02E7E8A /* Pods_YellowBasket.framework */; };
+		9D975BF22633146900F754F6 /* YellowBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D975BF12633146900F754F6 /* YellowBasketTests.swift */; };
 		CE0B479B210BAF00009DEC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B479A210BAF00009DEC4F /* AppDelegate.swift */; };
 		CE0B47A2210BAF02009DEC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A1210BAF02009DEC4F /* Assets.xcassets */; };
 		CE0B47A5210BAF02009DEC4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B47A3210BAF02009DEC4F /* LaunchScreen.storyboard */; };
-		CE0B47B0210BAF03009DEC4F /* YellowBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47AF210BAF03009DEC4F /* YellowBasketTests.swift */; };
 		CE0B47BF210BB082009DEC4F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */; };
 		CE0B47C8210BB145009DEC4F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47C7210BB145009DEC4F /* Utils.swift */; };
 		CE0B47CA210BC1ED009DEC4F /* HomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B47C9210BC1ED009DEC4F /* HomeMainViewController.swift */; };
@@ -52,7 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE0B47AC210BAF03009DEC4F /* PBXContainerItemProxy */ = {
+		9D975BF42633146900F754F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE0B478F210BAF00009DEC4F /* Project object */;
 			proxyType = 1;
@@ -62,18 +61,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YellowBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YellowBasketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		216D2EAAACB5FA9579E744A0 /* Pods-YellowBasket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasket.release.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket.release.xcconfig"; sourceTree = "<group>"; };
-		41411DFD6EEF97FFE91432AD /* Pods-YellowBasketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C35DB126666218B9B25B588 /* Pods-YellowBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket.debug.xcconfig"; sourceTree = "<group>"; };
-		B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.release.xcconfig"; sourceTree = "<group>"; };
+		028BFD439AD82B1B8FC2F610 /* Pods-YellowBasket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasket.release.xcconfig"; path = "Target Support Files/Pods-YellowBasket/Pods-YellowBasket.release.xcconfig"; sourceTree = "<group>"; };
+		5469A1AA276C12E5B53218C3 /* Pods_YellowBasketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YellowBasketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E50049FDA5B657039308F04 /* Pods-YellowBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasket.debug.xcconfig"; path = "Target Support Files/Pods-YellowBasket/Pods-YellowBasket.debug.xcconfig"; sourceTree = "<group>"; };
+		88EF4B65A12A3906CDDAC441 /* Pods-YellowBasketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.debug.xcconfig"; path = "Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D975BEF2633146900F754F6 /* YellowBasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YellowBasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D975BF12633146900F754F6 /* YellowBasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowBasketTests.swift; sourceTree = "<group>"; };
+		9D975BF32633146900F754F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0B4797210BAF00009DEC4F /* YellowBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YellowBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0B479A210BAF00009DEC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0B47A1210BAF02009DEC4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0B47A4210BAF02009DEC4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0B47A6210BAF02009DEC4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE0B47AB210BAF03009DEC4F /* YellowBasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YellowBasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0B47AF210BAF03009DEC4F /* YellowBasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowBasketTests.swift; sourceTree = "<group>"; };
 		CE0B47B1210BAF03009DEC4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0B47BE210BB082009DEC4F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -112,46 +111,56 @@
 		CEED1FC72111204700F32002 /* ProductDetailsMainPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsMainPresenterProtocol.swift; sourceTree = "<group>"; };
 		CEED1FC921112D3B00F32002 /* ItemDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDescription.swift; sourceTree = "<group>"; };
 		CEED1FCB21112ECE00F32002 /* ItemDescriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDescriptionRequest.swift; sourceTree = "<group>"; };
+		DF1611E6054AA9A4B02E7E8A /* Pods_YellowBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YellowBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1536BEC2C1BB3916F8BD523 /* Pods-YellowBasketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YellowBasketTests.release.xcconfig"; path = "Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9D975BEC2633146900F754F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE0B4794210BAF00009DEC4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316559EE11B24ECECEDB3AD4 /* Pods_YellowBasket.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE0B47A8210BAF03009DEC4F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1CEBC023F04E209436A9788 /* Pods_YellowBasketTests.framework in Frameworks */,
+				68087F545FCFA1C20F2488C3 /* Pods_YellowBasket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37A07AE08240D20C64A763E6 /* Frameworks */ = {
+		4AB3BE14D7DD92FF542BC3DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				19D94693988A88DA9C7F5318 /* Pods_YellowBasket.framework */,
-				1D676BD9265867E8E555B036 /* Pods_YellowBasketTests.framework */,
+				6E50049FDA5B657039308F04 /* Pods-YellowBasket.debug.xcconfig */,
+				028BFD439AD82B1B8FC2F610 /* Pods-YellowBasket.release.xcconfig */,
+				88EF4B65A12A3906CDDAC441 /* Pods-YellowBasketTests.debug.xcconfig */,
+				E1536BEC2C1BB3916F8BD523 /* Pods-YellowBasketTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4D123FBE6EB68123733780B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF1611E6054AA9A4B02E7E8A /* Pods_YellowBasket.framework */,
+				5469A1AA276C12E5B53218C3 /* Pods_YellowBasketTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		672ABB24883C0BB41276AEB2 /* Pods */ = {
+		9D975BF02633146900F754F6 /* YellowBasketTests */ = {
 			isa = PBXGroup;
 			children = (
-				5C35DB126666218B9B25B588 /* Pods-YellowBasket.debug.xcconfig */,
-				216D2EAAACB5FA9579E744A0 /* Pods-YellowBasket.release.xcconfig */,
-				41411DFD6EEF97FFE91432AD /* Pods-YellowBasketTests.debug.xcconfig */,
-				B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */,
+				9D975BF12633146900F754F6 /* YellowBasketTests.swift */,
+				9D975BF32633146900F754F6 /* Info.plist */,
 			);
-			name = Pods;
+			path = YellowBasketTests;
 			sourceTree = "<group>";
 		};
 		CE0B478E210BAF00009DEC4F = {
@@ -159,9 +168,10 @@
 			children = (
 				CE0B4799210BAF00009DEC4F /* YellowBasket */,
 				CE0B47AE210BAF03009DEC4F /* YellowBasketTests */,
+				9D975BF02633146900F754F6 /* YellowBasketTests */,
 				CE0B4798210BAF00009DEC4F /* Products */,
-				672ABB24883C0BB41276AEB2 /* Pods */,
-				37A07AE08240D20C64A763E6 /* Frameworks */,
+				4AB3BE14D7DD92FF542BC3DA /* Pods */,
+				4D123FBE6EB68123733780B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0B4797210BAF00009DEC4F /* YellowBasket.app */,
-				CE0B47AB210BAF03009DEC4F /* YellowBasketTests.xctest */,
+				9D975BEF2633146900F754F6 /* YellowBasketTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,16 +387,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9D975BEE2633146900F754F6 /* YellowBasketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D975BF62633146900F754F6 /* Build configuration list for PBXNativeTarget "YellowBasketTests" */;
+			buildPhases = (
+				9D975BEB2633146900F754F6 /* Sources */,
+				9D975BEC2633146900F754F6 /* Frameworks */,
+				9D975BED2633146900F754F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D975BF52633146900F754F6 /* PBXTargetDependency */,
+			);
+			name = YellowBasketTests;
+			productName = YellowBasketTests;
+			productReference = 9D975BEF2633146900F754F6 /* YellowBasketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CE0B4796210BAF00009DEC4F /* YellowBasket */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0B47B4210BAF03009DEC4F /* Build configuration list for PBXNativeTarget "YellowBasket" */;
 			buildPhases = (
-				95F88C739359760A1C3DBAA5 /* [CP] Check Pods Manifest.lock */,
+				D0623264296CF095E227CF78 /* [CP] Check Pods Manifest.lock */,
 				CE0B4793210BAF00009DEC4F /* Sources */,
 				CE0B4794210BAF00009DEC4F /* Frameworks */,
 				CE0B4795210BAF00009DEC4F /* Resources */,
-				B6BBAA49932B43D874DFF53E /* [CP] Embed Pods Frameworks */,
-				24436927EE44FF597C84F5AC /* [CP] Copy Pods Resources */,
+				A022ED948ED941E3BBD01A09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -397,43 +424,22 @@
 			productReference = CE0B4797210BAF00009DEC4F /* YellowBasket.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE0B47AA210BAF03009DEC4F /* YellowBasketTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CE0B47B7210BAF03009DEC4F /* Build configuration list for PBXNativeTarget "YellowBasketTests" */;
-			buildPhases = (
-				E212ECC100EAEC15966C4AA6 /* [CP] Check Pods Manifest.lock */,
-				CE0B47A7210BAF03009DEC4F /* Sources */,
-				CE0B47A8210BAF03009DEC4F /* Frameworks */,
-				CE0B47A9210BAF03009DEC4F /* Resources */,
-				60C1F3C9BB3477B61A8D4076 /* [CP] Embed Pods Frameworks */,
-				7C9DD72A980C1957B7DE65FD /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CE0B47AD210BAF03009DEC4F /* PBXTargetDependency */,
-			);
-			name = YellowBasketTests;
-			productName = YellowBasketTests;
-			productReference = CE0B47AB210BAF03009DEC4F /* YellowBasketTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CE0B478F210BAF00009DEC4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = FRisma;
 				TargetAttributes = {
+					9D975BEE2633146900F754F6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CE0B4796210BAF00009DEC4F;
+					};
 					CE0B4796210BAF00009DEC4F = {
 						CreatedOnToolsVersion = 9.4.1;
-					};
-					CE0B47AA210BAF03009DEC4F = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = CE0B4796210BAF00009DEC4F;
 					};
 				};
 			};
@@ -451,12 +457,19 @@
 			projectRoot = "";
 			targets = (
 				CE0B4796210BAF00009DEC4F /* YellowBasket */,
-				CE0B47AA210BAF03009DEC4F /* YellowBasketTests */,
+				9D975BEE2633146900F754F6 /* YellowBasketTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9D975BED2633146900F754F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE0B4795210BAF00009DEC4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,115 +479,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE0B47A9210BAF03009DEC4F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24436927EE44FF597C84F5AC /* [CP] Copy Pods Resources */ = {
+		A022ED948ED941E3BBD01A09 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		60C1F3C9BB3477B61A8D4076 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C9DD72A980C1957B7DE65FD /* [CP] Copy Pods Resources */ = {
+		D0623264296CF095E227CF78 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasketTests/Pods-YellowBasketTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95F88C739359760A1C3DBAA5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-YellowBasket-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6BBAA49932B43D874DFF53E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YellowBasket/Pods-YellowBasket-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E212ECC100EAEC15966C4AA6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YellowBasketTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -584,6 +524,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9D975BEB2633146900F754F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D975BF22633146900F754F6 /* YellowBasketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE0B4793210BAF00009DEC4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -628,21 +576,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE0B47A7210BAF03009DEC4F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE0B47B0210BAF03009DEC4F /* YellowBasketTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE0B47AD210BAF03009DEC4F /* PBXTargetDependency */ = {
+		9D975BF52633146900F754F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE0B4796210BAF00009DEC4F /* YellowBasket */;
-			targetProxy = CE0B47AC210BAF03009DEC4F /* PBXContainerItemProxy */;
+			targetProxy = 9D975BF42633146900F754F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -658,6 +598,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9D975BF72633146900F754F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2JETAFZVTT;
+				INFOPLIST_FILE = YellowBasketTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitso.alpha.YellowBasketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YellowBasket.app/YellowBasket";
+			};
+			name = Debug;
+		};
+		9D975BF82633146900F754F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2JETAFZVTT;
+				INFOPLIST_FILE = YellowBasketTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitso.alpha.YellowBasketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YellowBasket.app/YellowBasket";
+			};
+			name = Release;
+		};
 		CE0B47B2210BAF03009DEC4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -774,7 +761,7 @@
 		};
 		CE0B47B5210BAF03009DEC4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C35DB126666218B9B25B588 /* Pods-YellowBasket.debug.xcconfig */;
+			baseConfigurationReference = 6E50049FDA5B657039308F04 /* Pods-YellowBasket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -794,7 +781,7 @@
 		};
 		CE0B47B6210BAF03009DEC4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 216D2EAAACB5FA9579E744A0 /* Pods-YellowBasket.release.xcconfig */;
+			baseConfigurationReference = 028BFD439AD82B1B8FC2F610 /* Pods-YellowBasket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -812,53 +799,18 @@
 			};
 			name = Release;
 		};
-		CE0B47B8210BAF03009DEC4F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41411DFD6EEF97FFE91432AD /* Pods-YellowBasketTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QY797FB22P;
-				INFOPLIST_FILE = YellowBasketTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.frisma.YellowBasketTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YellowBasket.app/YellowBasket";
-			};
-			name = Debug;
-		};
-		CE0B47B9210BAF03009DEC4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B255A2EC1C8EAD7BE72FAFB6 /* Pods-YellowBasketTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QY797FB22P;
-				INFOPLIST_FILE = YellowBasketTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.frisma.YellowBasketTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YellowBasket.app/YellowBasket";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9D975BF62633146900F754F6 /* Build configuration list for PBXNativeTarget "YellowBasketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D975BF72633146900F754F6 /* Debug */,
+				9D975BF82633146900F754F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE0B4792210BAF00009DEC4F /* Build configuration list for PBXProject "YellowBasket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -873,15 +825,6 @@
 			buildConfigurations = (
 				CE0B47B5210BAF03009DEC4F /* Debug */,
 				CE0B47B6210BAF03009DEC4F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CE0B47B7210BAF03009DEC4F /* Build configuration list for PBXNativeTarget "YellowBasketTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CE0B47B8210BAF03009DEC4F /* Debug */,
-				CE0B47B9210BAF03009DEC4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

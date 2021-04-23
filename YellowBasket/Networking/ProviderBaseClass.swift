@@ -11,11 +11,11 @@ import Alamofire
 
 class ProviderBaseClass {
     
-    private let manager: Alamofire.SessionManager = {
+    private let manager: Alamofire.Session = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 10
         configuration.timeoutIntervalForResource = 10
-        return Alamofire.SessionManager(configuration: configuration)
+        return Alamofire.Session(configuration: configuration)
     }()
     
     public func call(endpoint: String,
@@ -25,7 +25,7 @@ class ProviderBaseClass {
         
         let url = endpoint+request.path
         manager.request(url,
-                        method: HTTPMethod.init(rawValue: request.method.rawValue)!,
+                        method: HTTPMethod.init(rawValue: request.method.rawValue),
                         parameters: request.params,
                         encoding: URLEncoding.default,
                         headers: [:])
