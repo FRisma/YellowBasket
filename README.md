@@ -8,4 +8,6 @@
       </a>
     
 
+CI provided by Bitrise
+
 by Franco Emilio Risma
